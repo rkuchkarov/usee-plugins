@@ -1,7 +1,7 @@
 {
   "id": "home-assistant",
   "name": "Home Assistant",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "minAgent": "1.0.0",
   "sdk": 1,
   "entry": "plugin.js",
