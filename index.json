@@ -8,8 +8,8 @@
     "latest": {
       "version": "1.0.0",
       "minAgent": "1.0.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.0.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.0.0/plugin.js",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/plugin.js",
       "sha256": "C00BD21314DEA24ED860E52E53B4996EFA6CEDB321B6C5494E1640685D2313E5"
     },
     "versions": []
