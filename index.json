@@ -1,0 +1,17 @@
+[
+  {
+    "id": "home-assistant",
+    "name": "Home Assistant",
+    "description": "Карточки сущностей HA (gauge/meters/status), условия видимости и тосты usee_notify",
+    "author": "Usee",
+    "repository": "https://github.com/OWNER/usee-plugins",
+    "latest": {
+      "version": "1.0.0",
+      "minAgent": "1.0.0",
+      "manifestUrl": "https://raw.githubusercontent.com/OWNER/usee-plugins/main/home-assistant/1.0.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/OWNER/usee-plugins/main/home-assistant/1.0.0/plugin.js",
+      "sha256": "ЗАПОЛНИТЬ-ПРИ-ПУБЛИКАЦИИ (usee-plugin-template/tools/release.mjs)"
+    },
+    "versions": []
+  }
+]
