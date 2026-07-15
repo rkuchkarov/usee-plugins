@@ -1,0 +1,49 @@
+{
+  "id": "home-assistant",
+  "name": "Home Assistant",
+  "version": "1.1.0",
+  "minAgent": "1.1.0",
+  "sdk": 1,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": ["setting:url"],
+    "notifications": true
+  },
+  "settings": [
+    { "key": "url", "type": "string", "label": "Адрес сервера", "required": true },
+    { "key": "auth", "type": "oauth", "label": "Вход через браузер",
+      "oauth": { "urlFrom": "url", "kind": "home-assistant" } },
+    { "key": "token", "type": "secret", "label": "Long-lived токен (вместо входа)" },
+    { "key": "bindings", "type": "list", "of": "object", "label": "Сущности",
+      "editor": { "type": "picker", "options": "listEntities", "multi": true, "live": true,
+                  "test": "checkConnection",
+                  "assign": { "id": "entities", "label": "label", "unit": "unit" } },
+      "fields": [
+        { "key": "entities", "type": "string", "label": "Сущности (через запятую)", "required": true,
+          "editor": { "type": "autocomplete", "options": "listEntities" } },
+        { "key": "card", "type": "select", "label": "Карточка",
+          "options": ["auto", "gauge", "meters", "status"] },
+        { "key": "label", "type": "string", "label": "Подпись" },
+        { "key": "unit", "type": "string", "label": "Единица" },
+        { "key": "min", "type": "number", "label": "Мин (для шкалы)" },
+        { "key": "max", "type": "number", "label": "Макс (для шкалы)" },
+        { "key": "title", "type": "string", "label": "Заголовок (meters)" },
+        { "key": "badgeOn", "type": "string", "label": "Бейдж ВКЛ (status)" },
+        { "key": "badgeOff", "type": "string", "label": "Бейдж ВЫКЛ (status)" },
+        { "key": "band", "type": "number", "label": "Ряд (band)" },
+        { "key": "order", "type": "number", "label": "Порядок" },
+        { "key": "width", "type": "select", "label": "Ширина",
+          "options": ["auto", "flex", "fixed"] },
+        { "key": "minW", "type": "number", "label": "Мин. ширина (2-6)" },
+        { "key": "maxW", "type": "number", "label": "Макс. ширина (2-6)" },
+        { "key": "enabled", "type": "bool", "label": "Показывать" },
+        { "key": "condEntity", "type": "string", "label": "Условие: сущность",
+          "editor": { "type": "autocomplete", "options": "listEntities" } },
+        { "key": "condOp", "type": "select", "label": "Условие: оператор",
+          "options": ["нет", "==", "!=", "<", ">", "<=", ">=", "contains", "not_contains",
+                      "startswith", "endswith", "in", "not_in", "exists", "not_exists",
+                      "is_on", "is_off"] },
+        { "key": "condValue", "type": "string", "label": "Условие: значение" }
+      ] }
+  ]
+}
