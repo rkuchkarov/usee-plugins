@@ -7,8 +7,7 @@
   "entry": "plugin.js",
   "permissions": {
     "pipe": ["discord-ipc-*"],
-    "net": ["discord.com", "cdn.discordapp.com"],
-    "contexts": true
+    "net": ["discord.com", "cdn.discordapp.com"]
   },
   "settings": [
     { "key": "showChannelName", "type": "bool", "label": "Показывать название канала", "default": true }

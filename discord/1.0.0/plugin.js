@@ -151,7 +151,6 @@ definePlugin({
     let stopped = false;
 
     ctx.cards.declare([{ id: "voice", label: "Discord — голосовой канал", type: "voice" }]);
-    declareContext();
 
     // ---- подключение: кандидаты по одному, не блокируя очередь ----
 
@@ -190,7 +189,6 @@ definePlugin({
         ctx.status.set("warn", "переподключение…");
         cleanupCall();
         publish();
-        declareContext();
         pipe = null;
         scheduleReconnect();
       });
@@ -317,7 +315,6 @@ definePlugin({
       for (const evt of ["SPEAKING_START", "SPEAKING_STOP",
                          "VOICE_STATE_CREATE", "VOICE_STATE_UPDATE", "VOICE_STATE_DELETE"])
         send("SUBSCRIBE", { channel_id: id }, evt, () => { });
-      declareContext();
       publish();
       ctx.log.info("в канале " + (channelName || id) + ": " + order.length);
     }
@@ -326,7 +323,7 @@ definePlugin({
       switch (evt) {
         case "VOICE_CHANNEL_SELECT":
           if (d.channel_id) send("GET_SELECTED_VOICE_CHANNEL", {}, null, (err, data) => { if (!err) enterChannel(data); });
-          else { cleanupCall(); declareContext(); publish(); }
+          else { cleanupCall(); publish(); }
           return;
         case "SPEAKING_START":
         case "SPEAKING_STOP": {
@@ -393,20 +390,12 @@ definePlugin({
     function publish() {
       if (!channelId || order.length === 0) {
         ctx.cards.remove("voice");
-        declareContext();
         return;
       }
       const payload = Object.assign({ type: "voice" }, voiceFields());
       ctx.cards.upsert("voice", payload, { stalenessSec: STALE_SEC });
     }
 
-    function declareContext() {
-      ctx.context.declare("voice", {
-        active: !!channelId,
-        scene: false,
-        recipe: [{ cardId: "voice", band: 2, order: 1.5 }],
-      });
-    }
 
     // ---- аватарки: cdn → toIcon (хост-пул) → cards.icon; кэш по id/hash ----
 
