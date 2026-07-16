@@ -187,7 +187,10 @@ definePlugin({
       p.on("close", why => {
         if (gen !== generation) return;
         ctx.log.info("пайп закрыт: " + why);
+        ctx.status.set("warn", "переподключение…");
         cleanupCall();
+        publish();
+        declareContext();
         pipe = null;
         scheduleReconnect();
       });
