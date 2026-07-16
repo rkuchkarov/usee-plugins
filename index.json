@@ -13,6 +13,13 @@
       "sha256": "4D2D75CC1DBA99BCC7FE727637C9FD58E891470457E71079ACC74B1A80736150"
     },
     "versions": [
+      {
+        "version": "1.0.0",
+        "minAgent": "1.0.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.0.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.0.0/plugin.js",
+        "sha256": "C00BD21314DEA24ED860E52E53B4996EFA6CEDB321B6C5494E1640685D2313E5"
+      }
     ]
   },
   {
@@ -26,7 +33,7 @@
       "minAgent": "1.3.0",
       "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/discord/1.0.0/manifest.json",
       "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/discord/1.0.0/plugin.js",
-      "sha256": "2794C4FB7471378C04C6050929BC929C3C923762ECD0CE96C52BB457E71C55B4"
+      "sha256": "9CC5CA2E80F5BFB0AD730C54684D110DDE771D60304694FE806BE0229986D653"
     },
     "versions": []
   }
