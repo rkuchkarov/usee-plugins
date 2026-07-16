@@ -33,7 +33,7 @@
       "minAgent": "1.3.0",
       "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/discord/1.0.0/manifest.json",
       "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/discord/1.0.0/plugin.js",
-      "sha256": "19b804f71b22481f9d35dde1920124711e36e6d6525dc7be297677a5a6b34101"
+      "sha256": "9CC5CA2E80F5BFB0AD730C54684D110DDE771D60304694FE806BE0229986D653"
     },
     "versions": []
   }
