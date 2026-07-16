@@ -1,0 +1,70 @@
+{
+  "id": "home-assistant",
+  "name": "Home Assistant",
+  "version": "1.2.0",
+  "minAgent": "1.2.0",
+  "sdk": 2,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": ["setting:url"],
+    "notifications": true
+  },
+  "settings": [
+    { "key": "url", "type": "string", "label": "Адрес сервера", "required": true },
+    { "key": "auth", "type": "oauth", "label": "Вход через браузер",
+      "oauth": { "urlFrom": "url", "kind": "home-assistant" } },
+    { "key": "token", "type": "secret", "label": "Long-lived токен (вместо входа)" },
+    { "key": "bindings", "type": "list", "of": "object", "label": "Сущности",
+      "editor": { "type": "picker", "options": "listEntities", "multi": true, "live": true,
+                  "test": "checkConnection",
+                  "assign": { "id": "entities", "label": "label", "unit": "unit" } },
+      "fields": [
+        { "key": "entities", "type": "string", "label": "Сущности (через запятую)", "required": true,
+          "editor": { "type": "autocomplete", "options": "listEntities" } },
+        { "key": "card", "type": "select", "label": "Карточка",
+          "options": [
+            { "value": "auto", "label": "авто" },
+            { "value": "gauge", "label": "gauge — значение" },
+            { "value": "meters", "label": "meters — мини-бары" },
+            { "value": "status", "label": "status — вкл/выкл" }
+          ] },
+        { "key": "label", "type": "string", "label": "Подпись" },
+        { "key": "unit", "type": "string", "label": "Единица",
+          "showWhen": { "field": "card", "in": ["gauge", "auto"] } },
+        { "key": "min", "type": "number", "label": "Шкала: мин",
+          "showWhen": { "field": "card", "in": ["gauge", "auto"] } },
+        { "key": "max", "type": "number", "label": "Шкала: макс",
+          "showWhen": { "field": "card", "in": ["gauge", "auto"] } },
+        { "key": "title", "type": "string", "label": "Заголовок",
+          "showWhen": { "field": "card", "in": ["meters"] } },
+        { "key": "badgeOn", "type": "string", "label": "Бейдж ВКЛ",
+          "showWhen": { "field": "card", "in": ["status"] } },
+        { "key": "badgeOff", "type": "string", "label": "Бейдж ВЫКЛ",
+          "showWhen": { "field": "card", "in": ["status"] } },
+        { "key": "band", "type": "number", "label": "Ряд (band)" },
+        { "key": "width", "type": "select", "label": "Ширина",
+          "options": [
+            { "value": "auto", "label": "по умолчанию" },
+            { "value": "fixed", "label": "компактная" },
+            { "value": "flex", "label": "растягивать" }
+          ] },
+        { "key": "minW", "type": "number", "label": "Мин. ширина (2-6)",
+          "showWhen": { "field": "width", "in": ["fixed", "flex"] } },
+        { "key": "maxW", "type": "number", "label": "Макс. ширина (2-6)",
+          "showWhen": { "field": "width", "in": ["fixed", "flex"] } },
+        { "key": "useCond", "type": "bool", "label": "Отображать по условию",
+          "section": "Условие видимости" },
+        { "key": "condEntity", "type": "string", "label": "Сущность условия",
+          "editor": { "type": "autocomplete", "options": "listEntities" },
+          "showWhen": { "field": "useCond", "truthy": true } },
+        { "key": "condOp", "type": "select", "label": "Оператор",
+          "options": ["==", "!=", "<", ">", "<=", ">=", "contains", "not_contains",
+                      "startswith", "endswith", "in", "not_in", "exists", "not_exists",
+                      "is_on", "is_off"],
+          "showWhen": { "field": "useCond", "truthy": true } },
+        { "key": "condValue", "type": "string", "label": "Значение",
+          "showWhen": { "field": "useCond", "truthy": true } },
+        { "key": "enabled", "type": "bool", "label": "Показывать" }
+      ] }
+  ]
+}
