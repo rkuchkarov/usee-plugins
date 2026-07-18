@@ -1,0 +1,38 @@
+{
+  "id": "weather",
+  "name": "Погода",
+  "version": "1.0.0",
+  "minAgent": "1.4.0",
+  "sdk": 2,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": ["*.open-meteo.com"]
+  },
+  "settings": [
+    { "key": "city", "type": "string", "label": "Город", "required": true,
+      "editor": { "type": "autocomplete", "options": "searchCity", "test": "checkCity" } },
+    { "key": "units", "type": "select", "label": "Единицы",
+      "options": [
+        { "value": "metric", "label": "°C · м/с" },
+        { "value": "imperial", "label": "°F · mph" }
+      ] },
+    { "key": "card", "type": "select", "label": "Карточки",
+      "options": [
+        { "value": "both", "label": "температура + условия" },
+        { "value": "gauge", "label": "только температура (gauge)" },
+        { "value": "status", "label": "только условия (status)" }
+      ] },
+    { "key": "label", "type": "string", "label": "Подпись (по умолчанию — город)" },
+    { "key": "intervalMin", "type": "number", "label": "Обновлять раз в N минут (1–240)" },
+    { "key": "width", "type": "select", "label": "Ширина",
+      "options": [
+        { "value": "auto", "label": "по умолчанию" },
+        { "value": "fixed", "label": "компактная" },
+        { "value": "flex", "label": "растягивать" }
+      ] },
+    { "key": "minW", "type": "number", "label": "Мин. ширина (2–6)",
+      "showWhen": { "field": "width", "in": ["fixed", "flex"] } },
+    { "key": "maxW", "type": "number", "label": "Макс. ширина (2–6)",
+      "showWhen": { "field": "width", "in": ["fixed", "flex"] } }
+  ]
+}

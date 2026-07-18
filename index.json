@@ -102,5 +102,20 @@
         "sha256": "AC0BA9BF9D4BD386623F7A11A2346A11BD5372F7EA96E0FFD8CB9C004C74FA83"
       }
     ]
+  },
+  {
+    "id": "weather",
+    "name": "Погода",
+    "description": "Текущая погода по городу через Open-Meteo (без ключа): gauge температуры и status условий (описание, ощущается, влажность, ветер)",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "1.0.0",
+      "minAgent": "1.4.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.0/plugin.js",
+      "sha256": "181B4BA5C0E5136E8514E604AF697A7436DB43E61BB6AA51675A490D02BDC895"
+    },
+    "versions": []
   }
 ]
