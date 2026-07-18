@@ -117,5 +117,20 @@
       "sha256": "593EAD994935FB8D410CB6270CB19D3E900032AA66AF2E57CB0890534822CD41"
     },
     "versions": []
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "description": "Статус демона Docker и контейнеры (CPU/RAM) через ctx.pipe (Docker Desktop) или TCP-эндпоинт; свой HTTP-over-pipe клиент",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "1.0.0",
+      "minAgent": "1.4.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.0/plugin.js",
+      "sha256": "73E3C87CE3FE371D3F7127DED42CFC73938168BF81C6FA585D04AA3B3643E3A4"
+    },
+    "versions": []
   }
 ]

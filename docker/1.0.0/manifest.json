@@ -1,0 +1,41 @@
+{
+  "id": "docker",
+  "name": "Docker",
+  "version": "1.0.0",
+  "minAgent": "1.4.0",
+  "sdk": 3,
+  "entry": "plugin.js",
+  "permissions": {
+    "pipe": ["docker_engine"],
+    "net": ["setting:endpoint"]
+  },
+  "settings": [
+    { "key": "endpoint", "type": "string",
+      "label": "TCP-адрес демона (пусто = именованный пайп)",
+      "section": "Подключение" },
+    { "key": "card", "type": "select", "label": "Карточки",
+      "options": [
+        { "value": "both", "label": "статус + контейнеры" },
+        { "value": "status", "label": "только статус" },
+        { "value": "meters", "label": "только контейнеры (CPU/RAM)" }
+      ] },
+    { "key": "metric", "type": "select", "label": "Показатель в мини-барах",
+      "options": [
+        { "value": "cpu", "label": "CPU %" },
+        { "value": "mem", "label": "RAM %" }
+      ],
+      "showWhen": { "field": "card", "in": ["both", "meters"] } },
+    { "key": "label", "type": "string", "label": "Подпись (по умолчанию — Docker)" },
+    { "key": "intervalSec", "type": "number", "label": "Опрос раз в N секунд (2–300)" },
+    { "key": "width", "type": "select", "label": "Ширина",
+      "options": [
+        { "value": "auto", "label": "по умолчанию" },
+        { "value": "fixed", "label": "компактная" },
+        { "value": "flex", "label": "растягивать" }
+      ] },
+    { "key": "minW", "type": "number", "label": "Мин. ширина (2–6)",
+      "showWhen": { "field": "width", "in": ["fixed", "flex"] } },
+    { "key": "maxW", "type": "number", "label": "Макс. ширина (2–6)",
+      "showWhen": { "field": "width", "in": ["fixed", "flex"] } }
+  ]
+}
