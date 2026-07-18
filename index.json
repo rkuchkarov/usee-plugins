@@ -125,11 +125,11 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.0/plugin.js",
-      "sha256": "73E3C87CE3FE371D3F7127DED42CFC73938168BF81C6FA585D04AA3B3643E3A4"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.1/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.1/plugin.js",
+      "sha256": "270EBBE539C2E29D2D05BFC701822B719C43138A1FDBA34D6C9A46B2F8CDB2CC"
     },
     "versions": []
   }
