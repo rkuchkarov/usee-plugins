@@ -114,7 +114,7 @@
       "minAgent": "1.4.0",
       "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.0/manifest.json",
       "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.0/plugin.js",
-      "sha256": "181B4BA5C0E5136E8514E604AF697A7436DB43E61BB6AA51675A490D02BDC895"
+      "sha256": "A1277F7F1B5066D55B2063C58669AC64AC934DF1AE6674B72AACCC0C5C5F0300"
     },
     "versions": []
   }

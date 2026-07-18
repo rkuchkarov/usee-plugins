@@ -9,8 +9,7 @@
     "net": ["*.open-meteo.com"]
   },
   "settings": [
-    { "key": "city", "type": "string", "label": "Город", "required": true,
-      "editor": { "type": "autocomplete", "options": "searchCity", "test": "checkCity" } },
+    { "key": "city", "type": "string", "label": "Город (например: Москва)", "required": true },
     { "key": "units", "type": "select", "label": "Единицы",
       "options": [
         { "value": "metric", "label": "°C · м/с" },

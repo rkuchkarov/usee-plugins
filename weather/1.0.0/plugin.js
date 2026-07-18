@@ -151,38 +151,7 @@ function geocode(ctx, name) {
   });
 }
 
-function placeLabel(r) {
-  return [r.name, r.admin1, r.country].filter(Boolean).join(", ");
-}
-
 definePlugin({
-  // Вызываемые экспорты (SDK v1.1): работают от значений формы (settings хост
-  // подменяет на время вызова), т.е. и до первого сохранения настроек.
-  providers: {
-    // Автодополнение поля «Город»: геокодим текущий ввод, отдаём кандидатов.
-    searchCity(ctx, form) {
-      const q = String((form && form.city) || ctx.settings.get("city") || "").trim();
-      if (!q) return [];
-      return geocode(ctx, q).then(rs => rs.filter(r => r && r.name).map(r => ({
-        id: String(r.name),
-        label: placeLabel(r),
-        detail: num(r.latitude) != null && num(r.longitude) != null
-          ? r.latitude.toFixed(2) + "," + r.longitude.toFixed(2) : undefined,
-      })));
-    },
-    // Кнопка «Проверить»: резолвим город и показываем найденное место.
-    checkCity(ctx, form) {
-      const q = String((form && form.city) || ctx.settings.get("city") || "").trim();
-      if (!q) return { ok: false, text: "укажите город" };
-      return geocode(ctx, q)
-        .then(rs => rs.length
-          ? { ok: true, text: "нашёл: " + placeLabel(rs[0]) +
-              " · " + rs[0].latitude.toFixed(2) + "," + rs[0].longitude.toFixed(2) }
-          : { ok: false, text: "город не найден" })
-        .catch(e => ({ ok: false, text: String(e) }));
-    },
-  },
-
   activate(ctx) {
     let geo = null;        // {lat, lon, name} — разрешённые координаты города
     let geoKey = "";       // строка города, для которой geo актуален (кэш)
