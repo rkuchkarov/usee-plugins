@@ -110,11 +110,11 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.0/plugin.js",
-      "sha256": "A1277F7F1B5066D55B2063C58669AC64AC934DF1AE6674B72AACCC0C5C5F0300"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.1/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.1/plugin.js",
+      "sha256": "593EAD994935FB8D410CB6270CB19D3E900032AA66AF2E57CB0890534822CD41"
     },
     "versions": []
   }
