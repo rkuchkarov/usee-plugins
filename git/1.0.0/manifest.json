@@ -1,0 +1,41 @@
+{
+  "id": "git",
+  "name": "Git",
+  "version": "1.0.0",
+  "minAgent": "1.4.0",
+  "sdk": 5,
+  "entry": "plugin.js",
+  "permissions": {},
+  "exec": [
+    { "id": "branch",
+      "run": "git",
+      "args": ["-C", "{repo}", "rev-parse", "--abbrev-ref", "HEAD"],
+      "vars": { "repo": { "type": "path", "under": "setting:repoPath" } } },
+    { "id": "diffstat",
+      "run": "git",
+      "args": ["-C", "{repo}", "diff", "--numstat", "HEAD"],
+      "vars": { "repo": { "type": "path", "under": "setting:repoPath" } } }
+  ],
+  "settings": [
+    { "key": "repoPath", "type": "string", "label": "Папка репозитория", "required": true,
+      "section": "Репозиторий" },
+    { "key": "card", "type": "select", "label": "Карточки",
+      "options": [
+        { "value": "both", "label": "ветка + файлы" },
+        { "value": "status", "label": "только ветка" },
+        { "value": "meters", "label": "только файлы (мини-бары)" }
+      ] },
+    { "key": "label", "type": "string", "label": "Подпись (по умолчанию — ветка)" },
+    { "key": "intervalSec", "type": "number", "label": "Опрос раз в N секунд (2–300)" },
+    { "key": "width", "type": "select", "label": "Ширина",
+      "options": [
+        { "value": "auto", "label": "по умолчанию" },
+        { "value": "fixed", "label": "компактная" },
+        { "value": "flex", "label": "растягивать" }
+      ] },
+    { "key": "minW", "type": "number", "label": "Мин. ширина (2–6)",
+      "showWhen": { "field": "width", "in": ["fixed", "flex"] } },
+    { "key": "maxW", "type": "number", "label": "Макс. ширина (2–6)",
+      "showWhen": { "field": "width", "in": ["fixed", "flex"] } }
+  ]
+}

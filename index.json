@@ -132,5 +132,20 @@
       "sha256": "270EBBE539C2E29D2D05BFC701822B719C43138A1FDBA34D6C9A46B2F8CDB2CC"
     },
     "versions": []
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "description": "Ветка и незакоммиченные изменения git-папки (демо ctx.exec / SDK 5): status ветки + meters файлов, число изменённых файлов на шину",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "1.0.0",
+      "minAgent": "1.4.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.0/plugin.js",
+      "sha256": "0425DE45C39C20054771827EB70D28BAE913413C887830F1ABF5B669E3E772DB"
+    },
+    "versions": []
   }
 ]
