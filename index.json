@@ -140,26 +140,26 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.0/plugin.js",
-      "sha256": "0425DE45C39C20054771827EB70D28BAE913413C887830F1ABF5B669E3E772DB"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.1/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.1/plugin.js",
+      "sha256": "665C5E8A40F462B4E26446FA56D7B4A401C3A95C57CA69B731BF6E2563D7E329"
     },
     "versions": []
   },
   {
     "id": "claude-limits",
     "name": "Лимиты Claude Code",
-    "description": "Лимиты Claude Code на дисплее (status: % сессии/недели + время до сброса). Данные — из statusline через файл usee-limits.json (мост, см. README); чтение через ctx.exec под выбранной папкой .claude",
+    "description": "Лимиты Claude Code на дисплее одной карточкой meters (бары сессии/недели + футер «СБРОС …»). Данные — из statusline через usee-limits.json (мост, см. README); чтение через ctx.exec под выбранной папкой .claude",
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.3",
+      "version": "1.1.0",
       "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.3/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.3/plugin.js",
-      "sha256": "E5294572892E84FC6B12FA479C6D980D91E1696BF0E64BC86EB24A65A555DA40"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.0/plugin.js",
+      "sha256": "512CBB83C8112DD4BBC18A10E8DE0B483305361F77EDDB26C5456317A381A918"
     },
     "versions": []
   }

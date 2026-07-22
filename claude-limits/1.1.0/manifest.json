@@ -1,0 +1,41 @@
+{
+  "id": "claude-limits",
+  "name": "Лимиты Claude Code",
+  "version": "1.1.0",
+  "minAgent": "1.4.0",
+  "sdk": 5,
+  "entry": "plugin.js",
+  "permissions": {},
+  "exec": [
+    { "id": "read",
+      "run": "findstr",
+      "args": ["/r", "^", "{file}"],
+      "vars": { "file": { "type": "path", "under": "setting:claudeDir" } } }
+  ],
+  "settings": [
+    { "key": "claudeDir", "type": "string", "label": "Папка Claude Code (.claude)", "required": true,
+      "section": "Источник",
+      "editor": { "type": "folder", "options": "%USERPROFILE%\\.claude;{wsl:.claude}" } },
+    { "type": "info", "label": "Как получить данные",
+      "text": "Реальные лимиты Claude Code есть только в его statusline. Добавь сниппет ниже в свой statusline (обычно ~/.claude/statusline.py, после строки data = json.load(sys.stdin)) — он будет писать файл usee-limits.json в ту папку .claude, что выбрана выше. Если statusline ещё нет — см. README. Пока сессия Claude Code открыта, данные обновляются; отсчёт до сброса точен и когда она закрыта." },
+    { "type": "info", "mono": true,
+      "text": "rl = data.get(\"rate_limits\")\nif rl:\n    import os, time\n    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), \"usee-limits.json\")\n    json.dump({\"rate_limits\": rl, \"at\": time.time()}, open(p + \".tmp\", \"w\"))\n    os.replace(p + \".tmp\", p)" },
+    { "key": "cards", "type": "select", "label": "Карточки",
+      "options": [
+        { "value": "both", "label": "сессия + неделя" },
+        { "value": "session", "label": "только сессия" },
+        { "value": "week", "label": "только неделя" }
+      ] },
+    { "key": "intervalSec", "type": "number", "label": "Опрос раз в N секунд (10–300)" },
+    { "key": "width", "type": "select", "label": "Ширина",
+      "options": [
+        { "value": "auto", "label": "по умолчанию" },
+        { "value": "fixed", "label": "компактная" },
+        { "value": "flex", "label": "растягивать" }
+      ] },
+    { "key": "minW", "type": "number", "label": "Мин. ширина (2–6)",
+      "showWhen": { "field": "width", "in": ["fixed", "flex"] } },
+    { "key": "maxW", "type": "number", "label": "Макс. ширина (2–6)",
+      "showWhen": { "field": "width", "in": ["fixed", "flex"] } }
+  ]
+}
