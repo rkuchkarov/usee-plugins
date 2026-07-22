@@ -147,5 +147,20 @@
       "sha256": "0425DE45C39C20054771827EB70D28BAE913413C887830F1ABF5B669E3E772DB"
     },
     "versions": []
+  },
+  {
+    "id": "claude-limits",
+    "name": "Лимиты Claude Code",
+    "description": "Лимиты Claude Code на дисплее (status: % сессии/недели + время до сброса). Данные — из statusline через файл usee-limits.json (мост, см. README); чтение через ctx.exec под выбранной папкой .claude",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "1.0.0",
+      "minAgent": "1.4.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.0/plugin.js",
+      "sha256": "B034D7B8917AC155FF9FC6F0AD670802E20D1ED96D2450BF8B6170FE95F98489"
+    },
+    "versions": []
   }
 ]
