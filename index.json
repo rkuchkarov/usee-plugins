@@ -155,11 +155,11 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.0",
+      "version": "1.0.2",
       "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.0/plugin.js",
-      "sha256": "B034D7B8917AC155FF9FC6F0AD670802E20D1ED96D2450BF8B6170FE95F98489"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.2/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.2/plugin.js",
+      "sha256": "C02862C16B5E7E7358CD87DAA0910474A322ED4D81A4AB367C4E465D73B3C6BA"
     },
     "versions": []
   }
