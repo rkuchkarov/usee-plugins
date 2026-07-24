@@ -151,15 +151,15 @@
   {
     "id": "claude-limits",
     "name": "Лимиты Claude Code",
-    "description": "Лимиты Claude Code на дисплее одной карточкой meters (бары сессии/недели + футер «СБРОС …»). Данные — из statusline через usee-limits.json (мост, см. README); чтение через ctx.exec под выбранной папкой .claude",
+    "description": "Лимиты Claude Code на дисплее одной карточкой meters (бары сессии/недели + футер «↻ 2ч 22мин (21:40)» — время сброса). Данные — из statusline через usee-limits.json (мост, см. README); чтение через ctx.exec под выбранной папкой .claude",
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.1.1",
+      "version": "1.1.2",
       "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.1/plugin.js",
-      "sha256": "F56913407A63938195B6EA1506ABDABFAEC673A1123015CD5C27F073E4E5D724"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.2/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.2/plugin.js",
+      "sha256": "8C60C206A25EAAC3F75551712C0811A0BB0A5D1708E33BB3C88293A1736829A0"
     },
     "versions": []
   }
