@@ -140,11 +140,11 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.1/plugin.js",
-      "sha256": "665C5E8A40F462B4E26446FA56D7B4A401C3A95C57CA69B731BF6E2563D7E329"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.2/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.2/plugin.js",
+      "sha256": "010C2669934A51B78652A07AA5AF3D971F4BA2A9CC8300B791A1C6CDCED3AB7F"
     },
     "versions": []
   },
