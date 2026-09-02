@@ -10,7 +10,7 @@
       "minAgent": "1.4.0",
       "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.5.0/manifest.json",
       "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.5.0/plugin.js",
-      "sha256": "338FEEB0CDFDE87241BFBA6BF749FE68B06F9302162B4D0A07659CB4212EF1A4"
+      "sha256": "5683E536363B4634FC6ABBCD82799FE957B81FA733E8B3268E8780926B93797A"
     },
     "versions": [
       {
@@ -80,11 +80,11 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.2",
+      "version": "1.1.0",
       "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.0.2/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.0.2/plugin.js",
-      "sha256": "C3A8D65AF225815296E4BA52503546655926FFAE70BD90F125191CAAB064BEF9"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.1.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.1.0/plugin.js",
+      "sha256": "C31A699DBE6E980A15D92E5364CBE09E62EC6D0F9DD4CAF8CE612F1EA1DC8D0F"
     },
     "versions": [
       {
