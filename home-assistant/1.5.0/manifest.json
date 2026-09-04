@@ -2,9 +2,9 @@
   "id": "home-assistant",
   "source": "ha",
   "name": "Home Assistant",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "minAgent": "1.4.0",
-  "sdk": 6,
+  "sdk": 7,
   "entry": "plugin.js",
   "permissions": {
     "net": [

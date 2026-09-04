@@ -309,6 +309,15 @@ definePlugin({
         friendly: attrs.friendly_name ? String(attrs.friendly_name) : null,
         unit: attrs.unit_of_measurement ? String(attrs.unit_of_measurement) : null,
         deviceClass: attrs.device_class ? String(attrs.device_class) : null,
+        // Состояния, которые сущность вправе принимать, — ТОЛЬКО если Home
+        // Assistant называет их сам (`attributes.options`: select, input_select,
+        // сенсор с device_class: enum). У обычного текстового сенсора их нет, и
+        // придумывать список по виденным значениям нельзя: подпись «N состояний
+        // из источника» стала бы ложью, а человек выбрал бы из трёх там, где их
+        // четыре.
+        states: Array.isArray(attrs.options) && attrs.options.length
+          ? attrs.options.map(String).filter((x) => x.length > 0)
+          : null,
       };
       const prev = states[id];
       if (isUnavailable(incoming.state) && prev && !isUnavailable(prev.state)) {
@@ -322,7 +331,7 @@ definePlugin({
 
     function markDisconnected() {
       for (const id of Object.keys(states))
-        states[id] = { state: "unavailable", friendly: states[id].friendly, unit: states[id].unit, deviceClass: states[id].deviceClass };
+        states[id] = { state: "unavailable", friendly: states[id].friendly, unit: states[id].unit, deviceClass: states[id].deviceClass, states: states[id].states };
       publish();   // карточки покажут «—»; без реконнекта их скроет staleness
       publishEntities();
     }
@@ -334,7 +343,7 @@ definePlugin({
       const t = now();
       for (const id of Object.keys(badSince))
         if (t - badSince[id] > BLIP_HOLD_MS && states[id]) {
-          states[id] = { state: "unavailable", friendly: states[id].friendly, unit: states[id].unit, deviceClass: states[id].deviceClass };
+          states[id] = { state: "unavailable", friendly: states[id].friendly, unit: states[id].unit, deviceClass: states[id].deviceClass, states: states[id].states };
           delete badSince[id];
         }
 
@@ -463,6 +472,9 @@ definePlugin({
           // читает. Второй уровень пикера появляется только у источников,
           // которые сами его объявляют, и здесь он есть.
           section: dot > 0 ? id.slice(0, dot) : undefined,
+          // Перечень состояний уходит в шину как есть (sdk 7): по нему редактор
+          // условия предлагает выбор вместо ввода вслепую.
+          states: (st && st.states) || undefined,
           ha: st && st.deviceClass ? { device_class: st.deviceClass } : undefined,
         });
       }
