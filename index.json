@@ -6,11 +6,11 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.6.0",
+      "version": "1.6.1",
       "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.0/plugin.js",
-      "sha256": "65351C6B43FF5001471A99A8BF632C6DDC685425387D45561EFEAB252E1E180B"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.1/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.1/plugin.js",
+      "sha256": "D8BAF9AD3594FF4D8D38980288D15E68EAC4BF00EC3F548A4463BD5F3C3E16B3"
     },
     "versions": [
       {
