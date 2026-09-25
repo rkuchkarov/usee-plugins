@@ -1,0 +1,23 @@
+{
+  "id": "weather",
+  "name": "Погода",
+  "version": "1.1.0",
+  "minAgent": "1.5.0",
+  "sdk": 8,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": ["*.open-meteo.com"]
+  },
+  "settings": [
+    { "key": "city", "type": "string", "label": "Город", "required": true,
+      "editor": { "type": "autocomplete", "options": "searchCity" } },
+    { "key": "units", "type": "select", "label": "Единицы", "default": "metric",
+      "options": [
+        { "value": "metric", "label": "°C · м/с" },
+        { "value": "imperial", "label": "°F · mph" }
+      ] },
+    { "key": "label", "type": "string", "label": "Подпись (по умолчанию — город)" },
+    { "key": "intervalMin", "type": "number", "label": "Обновлять раз в N минут",
+      "default": 15, "min": 1, "max": 240 }
+  ]
+}

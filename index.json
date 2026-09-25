@@ -6,19 +6,47 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.6.2",
-      "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.2/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.2/plugin.js",
-      "sha256": "D9BC31ED2FA2E2E460D090367888A0A5D80E63882AEAF685A4918E991DE9C179"
+      "version": "1.7.0",
+      "minAgent": "1.5.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.0/plugin.js",
+      "sha256": "59F3DF108F8B20EE2A377C78FCCD3778BDDD41FA28810B2C597855316C98ECC4"
     },
     "versions": [
       {
-        "version": "1.3.1",
+        "version": "1.6.2",
         "minAgent": "1.4.0",
-        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.3.1/manifest.json",
-        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.3.1/plugin.js",
-        "sha256": "CAB09CD7CECEE19B1D2A0DD90D958A5520F31375106BF5685B50638B7B14643D"
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.2/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.2/plugin.js",
+        "sha256": "D9BC31ED2FA2E2E460D090367888A0A5D80E63882AEAF685A4918E991DE9C179"
+      },
+      {
+        "version": "1.6.1",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.1/plugin.js",
+        "sha256": "D8BAF9AD3594FF4D8D38980288D15E68EAC4BF00EC3F548A4463BD5F3C3E16B3"
+      },
+      {
+        "version": "1.6.0",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.6.0/plugin.js",
+        "sha256": "65351C6B43FF5001471A99A8BF632C6DDC685425387D45561EFEAB252E1E180B"
+      },
+      {
+        "version": "1.5.0",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.5.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.5.0/plugin.js",
+        "sha256": "5683E536363B4634FC6ABBCD82799FE957B81FA733E8B3268E8780926B93797A"
+      },
+      {
+        "version": "1.4.0",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.4.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.4.0/plugin.js",
+        "sha256": "338FEEB0CDFDE87241BFBA6BF749FE68B06F9302162B4D0A07659CB4212EF1A4"
       },
       {
         "version": "1.3.0",
@@ -35,18 +63,25 @@
         "sha256": "4D2D75CC1DBA99BCC7FE727637C9FD58E891470457E71079ACC74B1A80736150"
       },
       {
-        "version": "1.0.0",
-        "minAgent": "1.0.0",
-        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.0.0/manifest.json",
-        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.0.0/plugin.js",
-        "sha256": "C00BD21314DEA24ED860E52E53B4996EFA6CEDB321B6C5494E1640685D2313E5"
+        "version": "1.2.0",
+        "minAgent": "1.2.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.2.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.2.0/plugin.js",
+        "sha256": "C9A76199FD630E23ED7280BD3EBBED40A4164B13EF602654C71DEF4DD59C4F14"
       },
       {
-        "version": "1.5.0",
-        "minAgent": "1.4.0",
-        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.5.0/manifest.json",
-        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.5.0/plugin.js",
-        "sha256": "5683E536363B4634FC6ABBCD82799FE957B81FA733E8B3268E8780926B93797A"
+        "version": "1.1.0",
+        "minAgent": "1.1.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.1.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.1.0/plugin.js",
+        "sha256": "C9A76199FD630E23ED7280BD3EBBED40A4164B13EF602654C71DEF4DD59C4F14"
+      },
+      {
+        "version": "1.0.1",
+        "minAgent": "1.0.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.0.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.0.1/plugin.js",
+        "sha256": "9F6756099AB243B764CA54F9260A93665961E836FE8C9E1AFCDA8E59D2F2457F"
       }
     ]
   },
@@ -95,6 +130,13 @@
     },
     "versions": [
       {
+        "version": "1.0.2",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.0.2/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.0.2/plugin.js",
+        "sha256": "C3A8D65AF225815296E4BA52503546655926FFAE70BD90F125191CAAB064BEF9"
+      },
+      {
         "version": "1.0.1",
         "minAgent": "1.4.0",
         "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.0.1/manifest.json",
@@ -117,13 +159,28 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.1",
-      "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.1/plugin.js",
-      "sha256": "593EAD994935FB8D410CB6270CB19D3E900032AA66AF2E57CB0890534822CD41"
+      "version": "1.1.0",
+      "minAgent": "1.5.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.1.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.1.0/plugin.js",
+      "sha256": "DE758334582A41FEE2717125F8A14FB9DCCD4AAC4507CD460F3E0D853C537982"
     },
-    "versions": []
+    "versions": [
+      {
+        "version": "1.0.1",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.1/plugin.js",
+        "sha256": "593EAD994935FB8D410CB6270CB19D3E900032AA66AF2E57CB0890534822CD41"
+      },
+      {
+        "version": "1.0.0",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.0.0/plugin.js",
+        "sha256": "A1277F7F1B5066D55B2063C58669AC64AC934DF1AE6674B72AACCC0C5C5F0300"
+      }
+    ]
   },
   {
     "id": "docker",
@@ -132,28 +189,72 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.1",
-      "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.1/plugin.js",
-      "sha256": "270EBBE539C2E29D2D05BFC701822B719C43138A1FDBA34D6C9A46B2F8CDB2CC"
+      "version": "1.1.0",
+      "minAgent": "1.5.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.1.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.1.0/plugin.js",
+      "sha256": "411BFE85C27D667D7D3F58215E827C53E2965F5D94752C4B429DEA2756344D7A"
     },
-    "versions": []
+    "versions": [
+      {
+        "version": "1.0.1",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.1/plugin.js",
+        "sha256": "270EBBE539C2E29D2D05BFC701822B719C43138A1FDBA34D6C9A46B2F8CDB2CC"
+      },
+      {
+        "version": "1.0.0",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.0.0/plugin.js",
+        "sha256": "73E3C87CE3FE371D3F7127DED42CFC73938168BF81C6FA585D04AA3B3643E3A4"
+      }
+    ]
   },
   {
     "id": "git",
     "name": "Git",
-    "description": "Ветка и незакоммиченные изменения git-папки (демо ctx.exec / SDK 5): status ветки + meters файлов, число изменённых файлов на шину",
+    "description": "Ветка и незакоммиченные изменения git-папки (демо ctx.exec): status ветки + meters файлов, число изменённых файлов на шину",
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.3",
-      "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.3/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.3/plugin.js",
-      "sha256": "390B4D388EBC19F4CDCAAE7892BCFE53195C30A5B07D2F0E67ACC2EADCF182B3"
+      "version": "1.1.0",
+      "minAgent": "1.5.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.1.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.1.0/plugin.js",
+      "sha256": "3EF850D32B20BD0B17B11404C09084AF4005FBDB367BD37D4B7AB97941B880DB"
     },
-    "versions": []
+    "versions": [
+      {
+        "version": "1.0.3",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.3/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.3/plugin.js",
+        "sha256": "390B4D388EBC19F4CDCAAE7892BCFE53195C30A5B07D2F0E67ACC2EADCF182B3"
+      },
+      {
+        "version": "1.0.2",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.2/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.2/plugin.js",
+        "sha256": "010C2669934A51B78652A07AA5AF3D971F4BA2A9CC8300B791A1C6CDCED3AB7F"
+      },
+      {
+        "version": "1.0.1",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.1/plugin.js",
+        "sha256": "665C5E8A40F462B4E26446FA56D7B4A401C3A95C57CA69B731BF6E2563D7E329"
+      },
+      {
+        "version": "1.0.0",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.0.0/plugin.js",
+        "sha256": "0425DE45C39C20054771827EB70D28BAE913413C887830F1ABF5B669E3E772DB"
+      }
+    ]
   },
   {
     "id": "claude-limits",
@@ -162,12 +263,83 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.2.1",
-      "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.2.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.2.1/plugin.js",
-      "sha256": "4805FD8E139511A73116253C302CBA7543A9BCD4E19A8A1F1D762A1FA00C1C01"
+      "version": "1.3.0",
+      "minAgent": "1.5.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.3.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.3.0/plugin.js",
+      "sha256": "3ED24338237088CBF0EA21C3CA2F41487E04F94D2215508458DCC9080AA47466"
     },
-    "versions": []
+    "versions": [
+      {
+        "version": "1.2.1",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.2.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.2.1/plugin.js",
+        "sha256": "4805FD8E139511A73116253C302CBA7543A9BCD4E19A8A1F1D762A1FA00C1C01"
+      },
+      {
+        "version": "1.2.0",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.2.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.2.0/plugin.js",
+        "sha256": "2F915D5A5C857A8E30798601464F933030989488DA434EB9B5A1274D44E5E4C4"
+      },
+      {
+        "version": "1.1.4",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.4/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.4/plugin.js",
+        "sha256": "95A7709174B8C5BB1C5F3C0B1B2621DCC4055C2B64A13F260CFDEEB010205057"
+      },
+      {
+        "version": "1.1.3",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.3/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.3/plugin.js",
+        "sha256": "602EEE89D5AE43563BD8529D2030F9267A7FF25459A7F85DB203B40D319B0BC7"
+      },
+      {
+        "version": "1.1.2",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.2/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.2/plugin.js",
+        "sha256": "8C60C206A25EAAC3F75551712C0811A0BB0A5D1708E33BB3C88293A1736829A0"
+      },
+      {
+        "version": "1.1.1",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.1/plugin.js",
+        "sha256": "F56913407A63938195B6EA1506ABDABFAEC673A1123015CD5C27F073E4E5D724"
+      },
+      {
+        "version": "1.1.0",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.1.0/plugin.js",
+        "sha256": "512CBB83C8112DD4BBC18A10E8DE0B483305361F77EDDB26C5456317A381A918"
+      },
+      {
+        "version": "1.0.3",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.3/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.3/plugin.js",
+        "sha256": "E5294572892E84FC6B12FA479C6D980D91E1696BF0E64BC86EB24A65A555DA40"
+      },
+      {
+        "version": "1.0.2",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.2/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.2/plugin.js",
+        "sha256": "C02862C16B5E7E7358CD87DAA0910474A322ED4D81A4AB367C4E465D73B3C6BA"
+      },
+      {
+        "version": "1.0.0",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/claude-limits/1.0.0/plugin.js",
+        "sha256": "B034D7B8917AC155FF9FC6F0AD670802E20D1ED96D2450BF8B6170FE95F98489"
+      }
+    ]
   }
 ]

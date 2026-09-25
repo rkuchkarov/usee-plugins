@@ -139,8 +139,6 @@ definePlugin({
           min: numOrNull(b.min), max: numOrNull(b.max),
           title: b.title || null, badgeOn: b.badgeOn ?? null, badgeOff: b.badgeOff ?? null,
           band: numOrNull(b.band) ?? 4, order: numOrNull(b.order) ?? 1,
-          width: b.width === "flex" || b.width === "fixed" ? b.width : null,
-          minW: numOrNull(b.minW), maxW: numOrNull(b.maxW),
           enabled: b.enabled !== false,
         }))
         .filter(b => b.entities.length > 0);
@@ -226,6 +224,7 @@ definePlugin({
           s.close();
           return;
         case "auth_ok": {
+          ctx.log.info("подключено");
           triggerSubId = 0;
           subscribedTo = "";
           subscribeStates(s);
@@ -235,7 +234,36 @@ definePlugin({
           ctx.status.set("ok", "подключено");
           return;
         }
+        // ОТВЕТ НА ПИНГ = «СВЯЗЬ ЖИВА, ЗНАЧЕНИЯ ДЕЙСТВИТЕЛЬНЫ». HA шлёт состояние
+        // только когда оно МЕНЯЕТСЯ, а хост считает значение протухшим, если его
+        // не обновляли дольше срока свежести (SceneEngine: Stale = «источник
+        // перестал давать данные» → сцена выходит немедленно). Для источника по
+        // событиям это ложь: неизменившийся сенсор на живой связи по-прежнему
+        // верен. Раньше тишина в HA дольше срока гасила ВСЕ карточки разом —
+        // каждые 15 с на 15 с, пока какое-нибудь событие не освежало их снова.
+        //
+        // Понг приходит каждые PING_MS, пока связь жива, — это и есть признак
+        // свежести. На мёртвой связи понгов нет, значения протухают сами, как и
+        // задумано. Заодно publish() доводит затянувшийся blip до unavailable,
+        // что прежде случалось только на событиях — на тихой подписке никогда.
+        case "pong":
+          publish();
+          publishEntities();
+          return;
         case "result":
+          // ОТКАЗ СЕРВЕРА НЕ ДОЛЖЕН БЫТЬ МОЛЧАЛИВЫМ. Раньше разбирались только
+          // массивы (ответ get_states), а ответ с success:false проходил мимо без
+          // следа. Отклонённая подписка на состояния значит «событий не будет
+          // НИ ПО ОДНОЙ сущности»: значения замирают на снимке подключения и
+          // оживают только при переподключении — и ничего об этом не говорит.
+          if (msg.success === false) {
+            const err = msg.error || {};
+            const what = msg.id === triggerSubId ? "подписку на состояния" : "запрос #" + msg.id;
+            ctx.log.warn("HA отклонил " + what + ": " + (err.code || "?") + " — " + (err.message || ""));
+            if (msg.id === triggerSubId) ctx.status.set("warn", "HA отклонил подписку: " + (err.code || "?"));
+            return;
+          }
+          if (msg.id === triggerSubId) ctx.log.info("подписка принята сервером");
           if (Array.isArray(msg.result)) {
             for (const st of msg.result) storeState(st);
             publish();
@@ -272,8 +300,32 @@ definePlugin({
     let triggerSubId = 0;      // id живой подписки на сервере
     let subscribedTo = "";     // набор, на который подписаны (для сравнения)
 
+    // Имя, которое HA примет в подписку: `домен.объект`, в каждой части только
+    // [a-z0-9_], без `_` по краям и без `__` (homeassistant.core.valid_entity_id).
+    // Проверка по частям, а не регуляркой с просмотром назад: песочнице так надёжнее.
+    function isHaEntityId(id) {
+      const parts = String(id).split(".");
+      if (parts.length !== 2 || String(id).indexOf("__") >= 0) return false;
+      for (const part of parts)
+        if (!/^[a-z0-9_]+$/.test(part) || part[0] === "_" || part[part.length - 1] === "_") return false;
+      return true;
+    }
+
     function subscribeStates(s) {
-      const w = wanted();
+      // ОДНО НЕВЕРНОЕ ИМЯ ОТКЛОНЯЕТ ВСЮ ПОДПИСКУ. HA проверяет набор целиком и
+      // на первом же не-идентификаторе отвечает invalid_format — событий не
+      // приходит НИ ПО ОДНОЙ сущности. В спрос такие имена попадают по двум
+      // дорогам: хост разворачивает размещённую карточку по «зеркалу карточек»
+      // (`sensor.x.number`), пока плагин ещё не объявил свои сущности, и в
+      // старых конфигах остаются адреса полей (`ha.sensor.x.state`). Живой лог
+      // 18.09: «Entity sensor.a1mini_print_progress.is_on is neither a valid
+      // entity ID…» — и карточки замерли на снимке подключения (D-37).
+      //
+      // Отсекаем и НАЗЫВАЕМ: молча выброшенное имя выглядело бы как «подписка
+      // есть», и человек не узнал бы, какой адрес в его конфиге мёртвый.
+      const all = wanted();
+      const w = all.filter(isHaEntityId);
+      const skipped = all.filter(id => !isHaEntityId(id));
       const sig = w.slice().sort().join("|");
       if (sig === subscribedTo) return;      // набор тот же — сервер не трогаем
 
@@ -287,6 +339,8 @@ definePlugin({
       if (w.length === 0) return;            // потребителей нет — и подписки нет
 
       triggerSubId = ++cmdId;
+      ctx.log.info("подписка на " + w.length + ": " + w.join(", ") +
+                   (skipped.length ? " | пропущены, не идентификаторы HA: " + skipped.join(", ") : ""));
       s.send(JSON.stringify({
         id: triggerSubId, type: "subscribe_trigger",
         trigger: { platform: "state", entity_id: w },
@@ -309,6 +363,15 @@ definePlugin({
         friendly: attrs.friendly_name ? String(attrs.friendly_name) : null,
         unit: attrs.unit_of_measurement ? String(attrs.unit_of_measurement) : null,
         deviceClass: attrs.device_class ? String(attrs.device_class) : null,
+        // Состояния, которые сущность вправе принимать, — ТОЛЬКО если Home
+        // Assistant называет их сам (`attributes.options`: select, input_select,
+        // сенсор с device_class: enum). У обычного текстового сенсора их нет, и
+        // придумывать список по виденным значениям нельзя: подпись «N состояний
+        // из источника» стала бы ложью, а человек выбрал бы из трёх там, где их
+        // четыре.
+        states: Array.isArray(attrs.options) && attrs.options.length
+          ? attrs.options.map(String).filter((x) => x.length > 0)
+          : null,
       };
       const prev = states[id];
       if (isUnavailable(incoming.state) && prev && !isUnavailable(prev.state)) {
@@ -322,7 +385,7 @@ definePlugin({
 
     function markDisconnected() {
       for (const id of Object.keys(states))
-        states[id] = { state: "unavailable", friendly: states[id].friendly, unit: states[id].unit, deviceClass: states[id].deviceClass };
+        states[id] = { state: "unavailable", friendly: states[id].friendly, unit: states[id].unit, deviceClass: states[id].deviceClass, states: states[id].states };
       publish();   // карточки покажут «—»; без реконнекта их скроет staleness
       publishEntities();
     }
@@ -334,7 +397,7 @@ definePlugin({
       const t = now();
       for (const id of Object.keys(badSince))
         if (t - badSince[id] > BLIP_HOLD_MS && states[id]) {
-          states[id] = { state: "unavailable", friendly: states[id].friendly, unit: states[id].unit, deviceClass: states[id].deviceClass };
+          states[id] = { state: "unavailable", friendly: states[id].friendly, unit: states[id].unit, deviceClass: states[id].deviceClass, states: states[id].states };
           delete badSince[id];
         }
 
@@ -348,12 +411,11 @@ definePlugin({
         if (!anyKnown) { ctx.cards.remove(cardId); continue; }
 
         const kind = autoKind(b, states[b.entities[0].toLowerCase()]);
+        // Ширину карточки человек задаёт в настройках карточки Usee (как у любой
+        // другой) — своей настройки ширины у плагина больше нет.
         const opts = {
           band: clampInt(b.band, 1, 6), order: b.order, stalenessSec: STALE_SEC,
         };
-        if (b.width) opts.width = b.width;
-        if (b.minW != null) opts.minW = clampInt(b.minW, 2, 6);
-        if (b.maxW != null) opts.maxW = clampInt(b.maxW, 2, 6);
 
         if (kind === "meters") ctx.cards.upsert(cardId, buildMeters(b), opts);
         else if (kind === "status") ctx.cards.upsert(cardId, buildStatus(b), opts);
@@ -463,7 +525,15 @@ definePlugin({
           // читает. Второй уровень пикера появляется только у источников,
           // которые сами его объявляют, и здесь он есть.
           section: dot > 0 ? id.slice(0, dot) : undefined,
+          // Перечень состояний уходит в шину как есть (sdk 7): по нему редактор
+          // условия предлагает выбор вместо ввода вслепую.
+          states: (st && st.states) || undefined,
           ha: st && st.deviceClass ? { device_class: st.deviceClass } : undefined,
+          // Тот же срок, что у карточек. Без него сущность брала умолчание
+          // хоста — 15 с, — а карточка 30: два клока одной и той же величины
+          // расходились, и сцена гасила карточку по сущности раньше, чем
+          // протухала сама карточка.
+          stalenessSec: STALE_SEC,
         });
       }
       ctx.entities.declare(out);

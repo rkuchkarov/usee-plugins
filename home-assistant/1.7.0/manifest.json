@@ -2,9 +2,9 @@
   "id": "home-assistant",
   "source": "ha",
   "name": "Home Assistant",
-  "version": "1.5.0",
-  "minAgent": "1.4.0",
-  "sdk": 6,
+  "version": "1.7.0",
+  "minAgent": "1.5.0",
+  "sdk": 7,
   "entry": "plugin.js",
   "permissions": {
     "net": [
@@ -155,49 +155,6 @@
             "field": "card",
             "in": [
               "status"
-            ]
-          }
-        },
-        {
-          "key": "width",
-          "type": "select",
-          "label": "Ширина",
-          "options": [
-            {
-              "value": "auto",
-              "label": "по умолчанию"
-            },
-            {
-              "value": "fixed",
-              "label": "компактная"
-            },
-            {
-              "value": "flex",
-              "label": "растягивать"
-            }
-          ]
-        },
-        {
-          "key": "minW",
-          "type": "number",
-          "label": "Мин. ширина (2-6)",
-          "showWhen": {
-            "field": "width",
-            "in": [
-              "fixed",
-              "flex"
-            ]
-          }
-        },
-        {
-          "key": "maxW",
-          "type": "number",
-          "label": "Макс. ширина (2-6)",
-          "showWhen": {
-            "field": "width",
-            "in": [
-              "fixed",
-              "flex"
             ]
           }
         }

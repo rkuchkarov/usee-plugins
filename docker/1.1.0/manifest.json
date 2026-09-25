@@ -1,0 +1,25 @@
+{
+  "id": "docker",
+  "name": "Docker",
+  "version": "1.1.0",
+  "minAgent": "1.5.0",
+  "sdk": 8,
+  "entry": "plugin.js",
+  "permissions": {
+    "pipe": ["docker_engine"],
+    "net": ["setting:endpoint"]
+  },
+  "settings": [
+    { "key": "endpoint", "type": "string",
+      "label": "TCP-адрес демона (пусто = именованный пайп)",
+      "section": "Подключение" },
+    { "key": "metric", "type": "select", "label": "Показатель в мини-барах", "default": "cpu",
+      "options": [
+        { "value": "cpu", "label": "CPU %" },
+        { "value": "mem", "label": "RAM %" }
+      ] },
+    { "key": "label", "type": "string", "label": "Подпись (по умолчанию — Docker)" },
+    { "key": "intervalSec", "type": "number", "label": "Опрос раз в N секунд",
+      "default": 5, "min": 2, "max": 300 }
+  ]
+}
