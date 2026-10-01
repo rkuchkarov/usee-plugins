@@ -159,13 +159,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.1.0",
+      "version": "1.1.1",
       "minAgent": "1.5.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.1.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.1.0/plugin.js",
-      "sha256": "DE758334582A41FEE2717125F8A14FB9DCCD4AAC4507CD460F3E0D853C537982"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.1.1/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.1.1/plugin.js",
+      "sha256": "FA39F486CD2ED0FACCB4DF825091A51A2B0D1795902DDF9835BED014C72ED753"
     },
     "versions": [
+      {
+        "version": "1.1.0",
+        "minAgent": "1.5.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.1.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/weather/1.1.0/plugin.js",
+        "sha256": "DE758334582A41FEE2717125F8A14FB9DCCD4AAC4507CD460F3E0D853C537982"
+      },
       {
         "version": "1.0.1",
         "minAgent": "1.4.0",
