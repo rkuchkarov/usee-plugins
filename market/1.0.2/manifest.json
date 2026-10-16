@@ -1,0 +1,54 @@
+{
+  "id": "market",
+  "source": "coingecko",
+  "name": "Рынок",
+  "version": "1.0.2",
+  "minAgent": "1.5.0",
+  "sdk": 8,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": [
+      "api.coingecko.com"
+    ]
+  },
+  "settings": [
+    {
+      "key": "primary",
+      "type": "string",
+      "label": "Основная монета (id CoinGecko)",
+      "default": "bitcoin",
+      "placeholder": "bitcoin"
+    },
+    {
+      "key": "symbols",
+      "type": "string",
+      "label": "Список монет через запятую",
+      "default": "bitcoin,ethereum,solana",
+      "placeholder": "bitcoin,ethereum,solana"
+    },
+    {
+      "key": "currency",
+      "type": "select",
+      "label": "Валюта",
+      "default": "usd",
+      "options": [
+        { "value": "usd", "label": "USD $" },
+        { "value": "eur", "label": "EUR €" },
+        { "value": "rub", "label": "RUB ₽" }
+      ]
+    },
+    {
+      "key": "label",
+      "type": "string",
+      "label": "Подпись (по умолчанию — тикер)"
+    },
+    {
+      "key": "intervalMin",
+      "type": "number",
+      "label": "Обновлять раз в N минут",
+      "default": 5,
+      "min": 1,
+      "max": 60
+    }
+  ]
+}
