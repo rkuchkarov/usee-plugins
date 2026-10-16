@@ -355,5 +355,20 @@
         "sha256": "B034D7B8917AC155FF9FC6F0AD670802E20D1ED96D2450BF8B6170FE95F98489"
       }
     ]
+  },
+  {
+    "id": "market",
+    "name": "Рынок",
+    "description": "Цены монет и 24-часовое изменение через CoinGecko (без ключа): gauge цены основной монеты в выбранной валюте + строка изменений всего списка",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "1.0.1",
+      "minAgent": "1.5.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/market/1.0.1/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/market/1.0.1/plugin.js",
+      "sha256": "A71EA8C149EA6301DD6437FDF9B9F00D116AE38FC307EFB06C124DB023C647C8"
+    },
+    "versions": []
   }
 ]
