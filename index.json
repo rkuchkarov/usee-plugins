@@ -363,13 +363,21 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "minAgent": "1.5.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/llama/1.0.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/llama/1.0.0/plugin.js",
-      "sha256": "92D0D08D75FB2453E2EE506F3AF9B993B1ADD8A1756A6105B4E5251890D322B9"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/llama/1.0.1/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/llama/1.0.1/plugin.js",
+      "sha256": "8FE2251F294F5A0D97BF66627803A95DB36E911E41570BA90556A676A80BFF74"
     },
-    "versions": []
+    "versions": [
+      {
+        "version": "1.0.0",
+        "minAgent": "1.5.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/llama/1.0.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/llama/1.0.0/plugin.js",
+        "sha256": "92D0D08D75FB2453E2EE506F3AF9B993B1ADD8A1756A6105B4E5251890D322B9"
+      }
+    ]
   },
   {
     "id": "market",
