@@ -357,6 +357,21 @@
     ]
   },
   {
+    "id": "llama",
+    "name": "LLM на llama.cpp",
+    "description": "llama.cpp-сервер: скорость генерации, занятость контекста, ход генерации и состояние (наблюдатель, ничего не отправляет)",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "1.0.0",
+      "minAgent": "1.5.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/llama/1.0.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/llama/1.0.0/plugin.js",
+      "sha256": "92D0D08D75FB2453E2EE506F3AF9B993B1ADD8A1756A6105B4E5251890D322B9"
+    },
+    "versions": []
+  },
+  {
     "id": "market",
     "name": "Рынок",
     "description": "Цены монет и 24-часовое изменение через CoinGecko (без ключа): gauge цены основной монеты в выбранной валюте + строка изменений всего списка",
