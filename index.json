@@ -427,5 +427,19 @@
         "sha256": "92D0D08D75FB2453E2EE506F3AF9B993B1ADD8A1756A6105B4E5251890D322B9"
       }
     ]
+  },
+  {
+    "id": "poe2-farm",
+    "name": "Фарм PoE2",
+    "description": "Фарм Path of Exile 2 по игровому логу Client.txt: сессия, забеги по картам и время + доход в divine по публичным вкладкам через trade2 и чистый доход с затратами (только чтение, игру не трогает)",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "0.4.2",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.2/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.2/plugin.js",
+      "sha256": "376D238EA85BC9B269D3E989406A14A0A8D274E27F67CB5FA83BF347C367F646"
+    },
+    "versions": []
   }
 ]
