@@ -435,11 +435,18 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "0.4.2",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.2/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.2/plugin.js",
-      "sha256": "376D238EA85BC9B269D3E989406A14A0A8D274E27F67CB5FA83BF347C367F646"
+      "version": "0.4.3",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.3/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.3/plugin.js",
+      "sha256": "F09CF62B4E6B18B2358FE37D269DA3FC28137183397D42CD1BD34A432056B07D"
     },
-    "versions": []
+    "versions": [
+      {
+        "version": "0.4.2",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.2/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.2/plugin.js",
+        "sha256": "376D238EA85BC9B269D3E989406A14A0A8D274E27F67CB5FA83BF347C367F646"
+      }
+    ]
   }
 ]
