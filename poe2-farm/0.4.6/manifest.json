@@ -1,0 +1,85 @@
+{
+  "id": "poe2-farm",
+  "name": "Фарм PoE2",
+  "version": "0.4.6",
+  "sdk": 9,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": ["www.pathofexile.com"],
+    "notifications": true
+  },
+  "exec": [
+    {
+      "id": "tail",
+      "run": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-Command",
+               "[Console]::OutputEncoding=[Text.Encoding]::UTF8;Get-Content -Tail 400 -Encoding UTF8 -LiteralPath", "{file}"],
+      "cwd": "setting:logDir",
+      "vars": { "file": { "type": "token", "pattern": "^[A-Za-z0-9 ._\\-]+$" } }
+    },
+    {
+      "id": "tailBig",
+      "run": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-Command",
+               "[Console]::OutputEncoding=[Text.Encoding]::UTF8;Get-Content -Tail",
+               "{lines}", "-Encoding UTF8 -LiteralPath", "{file}"],
+      "cwd": "setting:logDir",
+      "vars": {
+        "file": { "type": "token", "pattern": "^[A-Za-z0-9 ._\\-]+$" },
+        "lines": { "type": "int", "min": 1, "max": 1200 }
+      }
+    }
+  ],
+  "settings": [
+    {
+      "key": "logDir",
+      "type": "string",
+      "label": "Папка с логом PoE2",
+      "required": true,
+      "section": "Источник данных",
+      "editor": { "type": "folder", "options": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Path of Exile 2\\logs" }
+    },
+    { "type": "info", "text": "Игровой лог Client.txt лежит в папке установки игры (обычно …\\Path of Exile 2\\logs). Плагин читает только его хвост, в игру не пишет и ничего в ней не делает." },
+    { "type": "info", "text": "Гибелей в Client.txt нет: PoE2 их туда не пишет (проверено на реальном логе 375 МБ) — плагин считает карты и время, а не смерти." },
+    { "key": "logFile", "type": "string", "label": "Имя файла лога в этой папке", "default": "Client.txt" },
+    { "key": "pollSec", "type": "number", "label": "Опрос лога раз в N секунд", "default": 60, "min": 10, "max": 300 },
+    { "key": "sessionGapMin", "type": "number", "label": "Пауза N минут = конец сессии", "default": 30, "min": 2, "max": 180 },
+    { "key": "minRunSec", "type": "number", "label": "Забегом считается карта дольше N секунд", "default": 60, "min": 10, "max": 600 },
+    { "key": "stashOn", "type": "bool", "label": "Считать лут по публичным вкладкам", "default": true, "section": "Учёт лута" },
+    { "key": "tradeAccount", "type": "string", "label": "Аккаунт (Ник#1234)", "section": "Учёт лута" },
+    { "key": "league", "type": "string", "label": "Лига (пусто — определить сама)", "section": "Учёт лута" },
+    { "key": "tabPriceFrom", "type": "number", "label": "Цена самой дешёвой вкладки (divine)", "default": 990, "min": 1, "max": 1000, "section": "Учёт лута" },
+    { "key": "tabPriceTo", "type": "number", "label": "Цена самой дорогой вкладки (divine)", "default": 999, "min": 1, "max": 1000, "section": "Учёт лута" },
+    { "key": "stashMinGapSec", "type": "number", "label": "Снимать вкладки раз в N секунд", "default": 180, "min": 30, "max": 3600, "section": "Учёт лута" },
+    { "key": "fullSweepMin", "type": "number", "label": "Полный снимок вкладок раз в N минут", "default": 15, "min": 5, "max": 240, "section": "Учёт лута" },
+    { "type": "info", "section": "Учёт лута", "text": "Лут считается по публичным вкладкам через публичный поиск trade2: вход в аккаунт и POESESSID не нужны. Вкладка делается публичной правым кликом по ней в игре, а её цена задаётся именем вида «~price 990 divine Currency» — числа 990…999 и есть разные вкладки, по ним плагин их и различает. Merchant's Tab не используй: товар там продаётся мгновенно, и учёт сломается. Сайт индексирует изменения с лагом в несколько минут." },
+    { "key": "tabletCost", "type": "number", "label": "Планшет для карты стоит N divine", "default": 0, "min": 0, "max": 1000, "section": "Затраты и чистый доход" },
+    { "key": "tabletUses", "type": "number", "label": "Планшета хватает на N карт", "default": 3, "min": 1, "max": 20, "section": "Затраты и чистый доход" },
+    { "key": "trackTabletUses", "type": "bool", "label": "Считать использования планшета", "default": true, "section": "Затраты и чистый доход" },
+    { "key": "consumables", "type": "list", "of": "object", "label": "Расходники на каждый забег",
+      "section": "Затраты и чистый доход",
+      "fields": [
+        { "key": "item", "type": "string", "label": "Предмет", "required": true },
+        { "key": "div", "type": "number", "label": "div", "default": 0, "min": 0, "max": 1000 }
+      ] },
+    { "key": "maxDivPerRun", "type": "number", "label": "Выше N div за забег — подозрительно", "default": 20, "min": 1, "max": 1000, "section": "Затраты и чистый доход" },
+    { "key": "autoRules", "type": "bool", "label": "Подозрительные забеги исключать из средних самим", "default": true, "section": "Затраты и чистый доход" },
+    { "key": "excluded", "type": "list", "of": "object", "label": "Исключённые забеги (ручная правка)",
+      "section": "Затраты и чистый доход",
+      "editor": {
+        "type": "picker",
+        "options": "listRuns",
+        "multi": true,
+        "live": true,
+        "test": "checkCosts",
+        "assign": { "id": "run", "label": "label", "detail": "detail" }
+      },
+      "fields": [
+        { "key": "run", "type": "string", "label": "Забег", "required": true },
+        { "key": "label", "type": "string", "label": "Что это" },
+        { "key": "detail", "type": "string", "label": "Почему" }
+      ] },
+    { "type": "info", "section": "Затраты и чистый доход", "text": "Валовый доход (лут с вкладок в диванах) считается всегда. Чистый появляется, если задан сетап затрат: цена планшета делится на число карт и списывается по одному кусочку на забег, расходники берутся из списка. Прайса предметов из интернета для PoE2 сейчас нет (poe.ninja для PoE2 отдаёт только курсы divine/exalted/chaos), поэтому стоимость вводишь ты, а не сайт. Забег, где из вкладок ушёл divine/exalted/chaos/mirror/annulment, помечается: эта валюта в забеге не тратится, значит в учёт попал трейд или крафт." },
+    { "type": "info", "section": "Затраты и чистый доход", "text": "Если «подозрительные исключать самим» выключено, плагин только помечает такие забеги (⚠ на карточке и в статусе), а решение принимаешь ты: список забегов текущей сессии открывается ниже — выбранное выпадает из средних, крестик возвращает его обратно." }
+  ]
+}
