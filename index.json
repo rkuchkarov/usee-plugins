@@ -431,16 +431,22 @@
   {
     "id": "poe2-farm",
     "name": "Фарм PoE2",
-    "description": "Фарм Path of Exile 2 по игровому логу Client.txt: сессия, забеги по картам и время + доход в divine по публичным вкладкам через trade2 и чистый доход с затратами (только чтение, игру не трогает)",
+    "description": "Фарм Path of Exile 2: сессия, зоны и забеги по игровому логу + доход в divine по публичным вкладкам через trade2 (только чтение, игру не трогает)",
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "0.4.6",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.6/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.6/plugin.js",
-      "sha256": "2BFE3C96FE69848E2901E65FD2CB34C8ECAAEC12F156D431063995C49E9555CE"
+      "version": "0.5.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.5.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.5.0/plugin.js",
+      "sha256": "01CA8B281F1ADE99761CC69F04B24D63E5304E19E27E676700762150F523E61C"
     },
     "versions": [
+      {
+        "version": "0.4.6",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.6/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.6/plugin.js",
+        "sha256": "2BFE3C96FE69848E2901E65FD2CB34C8ECAAEC12F156D431063995C49E9555CE"
+      },
       {
         "version": "0.4.5",
         "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.4.5/manifest.json",

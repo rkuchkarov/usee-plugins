@@ -1,0 +1,52 @@
+{
+  "id": "poe2-farm",
+  "name": "Фарм PoE2",
+  "version": "0.5.0",
+  "sdk": 9,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": ["www.pathofexile.com"],
+    "notifications": true
+  },
+  "exec": [
+    {
+      "id": "tail",
+      "run": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-Command",
+               "[Console]::OutputEncoding=[Text.Encoding]::UTF8;Get-Content -Tail 400 -Encoding UTF8 -LiteralPath", "{file}"],
+      "cwd": "setting:logDir",
+      "vars": { "file": { "type": "token", "pattern": "^[A-Za-z0-9._\\-]+$" } }
+    },
+    {
+      "id": "tailBig",
+      "run": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-Command",
+               "[Console]::OutputEncoding=[Text.Encoding]::UTF8;Get-Content -Tail",
+               "{lines}", "-Encoding UTF8 -LiteralPath", "{file}"],
+      "cwd": "setting:logDir",
+      "vars": {
+        "file": { "type": "token", "pattern": "^[A-Za-z0-9._\\-]+$" },
+        "lines": { "type": "int", "min": 1, "max": 1200 }
+      }
+    }
+  ],
+  "settings": [
+    {
+      "key": "logDir",
+      "type": "string",
+      "label": "Папка с логом PoE2",
+      "required": true,
+      "section": "Источник данных",
+      "editor": { "type": "folder", "options": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Path of Exile 2\\logs" }
+    },
+    { "type": "info", "text": "обычно …\\Path of Exile 2\\logs" },
+    { "key": "logFile", "type": "string", "label": "Имя файла лога", "default": "LatestClient.txt" },
+    { "key": "pollSec", "type": "number", "label": "Опрос лога (секунд)", "default": 10, "min": 5, "max": 300 },
+    { "key": "tradeAccount", "type": "string", "label": "Аккаунт (Ник#1234)", "section": "Учёт лута" },
+    { "type": "info", "text": "ник — со страницы pathofexile2.com/my-account" },
+    { "key": "tabName", "type": "string", "label": "Публичная вкладка", "default": "~price 999 divine usee" },
+    { "type": "info", "text": "вкладку сделай публичной (правый клик по вкладке); её цена — в имени: ~price 999 divine <метка>" },
+    { "key": "league", "type": "string", "label": "Лига (пусто — определить сама)" },
+    { "key": "stashMinGapSec", "type": "number", "label": "Проверять вкладки (секунд)", "default": 180, "min": 30, "max": 3600 }
+  ]
+}
