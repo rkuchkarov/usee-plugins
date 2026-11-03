@@ -436,6 +436,21 @@
     ]
   },
   {
+    "id": "obs",
+    "name": "OBS Studio",
+    "description": "OBS Studio: запись и эфир (мгновенно по событиям), сцена в программе, метры OBS — кадры/с, CPU, скипнутые кадры, конжестия и битрейт, микрофон. Только чтение, OBS не управляет",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "1.0.0",
+      "minAgent": "1.5.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.0.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.0.0/plugin.js",
+      "sha256": "B7B011DDC49653D139CA16C2B62DE08E80A5B08579D4367CE94681D8364BE2A0"
+    },
+    "versions": []
+  },
+  {
     "id": "poe2-farm",
     "name": "Фарм PoE2",
     "description": "Фарм Path of Exile 2: сессия, зоны и забеги по игровому логу + доход в divine по публичным вкладкам через trade2 (только чтение, игру не трогает)",
