@@ -442,13 +442,21 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "minAgent": "1.5.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.0.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.0.0/plugin.js",
-      "sha256": "B7B011DDC49653D139CA16C2B62DE08E80A5B08579D4367CE94681D8364BE2A0"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.1.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.1.0/plugin.js",
+      "sha256": "2067EED8362D30D1924FEE3901DD205184DAF452E9308FC5B89DA0CAF539B098"
     },
-    "versions": []
+    "versions": [
+      {
+        "version": "1.0.0",
+        "minAgent": "1.5.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.0.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.0.0/plugin.js",
+        "sha256": "B7B011DDC49653D139CA16C2B62DE08E80A5B08579D4367CE94681D8364BE2A0"
+      }
+    ]
   },
   {
     "id": "poe2-farm",
