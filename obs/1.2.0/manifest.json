@@ -1,0 +1,41 @@
+{
+  "id": "obs",
+  "name": "OBS Studio",
+  "version": "1.2.0",
+  "minAgent": "1.5.0",
+  "sdk": 8,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": ["setting:host"],
+    "notifications": true
+  },
+  "settings": [
+    { "key": "host", "type": "string", "label": "Адрес OBS (host)", "required": true,
+      "default": "127.0.0.1", "section": "Подключение" },
+    { "key": "port", "type": "number", "label": "Порт obs-websocket", "default": 4455,
+      "min": 1, "max": 65535, "section": "Подключение" },
+    { "key": "password", "type": "secret", "label": "Пароль WebSocket-сервера (если задан)",
+      "section": "Подключение" },
+
+    { "key": "intervalSec", "type": "number", "label": "Опрос раз в N секунд",
+      "default": 1, "min": 1, "max": 30 },
+    { "key": "notify", "type": "select", "label": "Тосты о выходе в эфир / записи",
+      "default": "outputs", "options": [
+        { "value": "outputs", "label": "запись и эфир (включая обрывы)" },
+        { "value": "off", "label": "не слать" } ] },
+
+    { "key": "showMic", "type": "bool", "label": "Карточка микрофона", "default": true,
+      "section": "Микрофон" },
+    { "key": "micInput", "type": "string", "label": "Имя входа в OBS (пусто — выбрать самому)",
+      "section": "Микрофон", "showWhen": { "field": "showMic", "truthy": true },
+      "editor": { "type": "autocomplete", "options": "listInputs" } },
+
+    { "type": "info", "label": "Какой вход считать микрофоном",
+      "text": "Поле оставляем пустым: плагин берёт спец. вход Mic/Aux, который называет\nсам OBS, а если такого нет и вход захвата один — берёт его. Имя нужно, когда\nмикрофонов несколько или нужен другой (звук системы, второй микрофон).\nНапечатай две буквы в поле — подсказки покажут реальные входы OBS с типами.\nКарточка на экране подписана именем входа, а полный список — в логе плагина." },
+
+    { "type": "info", "label": "Что включить в OBS",
+      "text": "OBS 30.2+ ставит obs-websocket сам. Tools → WebSocket Server Settings →\nEnable WebSocket Server (порт 4455). Если включён «Authentication» — тот же\nпароль нужно ввести в настройках плагина.\nOBS 28 и старее: obs-websocket ставится отдельным плагином, и протокол у него\nдругой (4.x) — плагин Usee с ним не работает." },
+    { "type": "info", "label": "Плагин только читает",
+      "text": "В OBS не уходит ни одной команды: ни StartRecord, ни SetCurrentProgramScene.\nПереключать сцены и включать запись начнём, когда у прибора появится ввод." }
+  ]
+}
