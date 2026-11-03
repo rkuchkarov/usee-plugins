@@ -442,13 +442,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.1.0",
+      "version": "1.1.1",
       "minAgent": "1.5.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.1.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.1.0/plugin.js",
-      "sha256": "2067EED8362D30D1924FEE3901DD205184DAF452E9308FC5B89DA0CAF539B098"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.1.1/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.1.1/plugin.js",
+      "sha256": "4ED52A3AEAEC25490C2A9D121B174A1FC6A6FDDA1CE3725A6E65D3751FFF1D31"
     },
     "versions": [
+      {
+        "version": "1.1.0",
+        "minAgent": "1.5.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.1.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.1.0/plugin.js",
+        "sha256": "2067EED8362D30D1924FEE3901DD205184DAF452E9308FC5B89DA0CAF539B098"
+      },
       {
         "version": "1.0.0",
         "minAgent": "1.5.0",
