@@ -6,13 +6,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.7.1",
-      "minAgent": "1.5.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.1/plugin.js",
-      "sha256": "9154E950E2130F64B55C86A8DE2C8C8D765DB5E416D3B0C3AAA8A84E1F5BA3BB"
+      "version": "1.7.2",
+      "minAgent": "1.5.1",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.2/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.2/plugin.js",
+      "sha256": "8CA83248B15531953E59529D6615DE4DD0CE05E1603251C77747CC1BCEBDAAE1"
     },
     "versions": [
+      {
+        "version": "1.7.1",
+        "minAgent": "1.5.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.1/plugin.js",
+        "sha256": "9154E950E2130F64B55C86A8DE2C8C8D765DB5E416D3B0C3AAA8A84E1F5BA3BB"
+      },
       {
         "version": "1.7.0",
         "minAgent": "1.5.0",
@@ -442,13 +449,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.3.0",
+      "version": "1.4.0",
       "minAgent": "1.5.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.3.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.3.0/plugin.js",
-      "sha256": "58082408F6FC6CF535C1DAF3F2B2589FE79CEA28A61B7C1A85E3CF7152742E9C"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.4.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.4.0/plugin.js",
+      "sha256": "EB63DB7B7274F42BBBFD0F2B1C8AEEEE875B3D4E9C6281907E80DD0850428AE6"
     },
     "versions": [
+      {
+        "version": "1.3.0",
+        "minAgent": "1.5.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.3.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.3.0/plugin.js",
+        "sha256": "58082408F6FC6CF535C1DAF3F2B2589FE79CEA28A61B7C1A85E3CF7152742E9C"
+      },
       {
         "version": "1.2.0",
         "minAgent": "1.5.0",
@@ -486,12 +500,19 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "0.5.1",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.5.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.5.1/plugin.js",
-      "sha256": "750881ADA26C6E03766279C767679718D9A00B3725E2EB0A93F929709D9B263A"
+      "version": "0.6.1",
+      "minAgent": "1.6.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.6.1/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.6.1/plugin.js",
+      "sha256": "51FBEDA11A32CEACB3D1511C0190E5AABA782E498EE5E71FD1EAC9A33ED2F3B5"
     },
     "versions": [
+      {
+        "version": "0.5.1",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.5.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.5.1/plugin.js",
+        "sha256": "750881ADA26C6E03766279C767679718D9A00B3725E2EB0A93F929709D9B263A"
+      },
       {
         "version": "0.5.0",
         "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/poe2-farm/0.5.0/manifest.json",
