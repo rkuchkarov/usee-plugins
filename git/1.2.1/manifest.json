@@ -1,0 +1,36 @@
+{
+  "id": "git",
+  "name": "Git",
+  "version": "1.2.1",
+  "minAgent": "1.7.0",
+  "sdk": 11,
+  "entry": "plugin.js",
+  "permissions": {},
+  "exec": [
+    { "id": "branch",
+      "run": "git",
+      "args": ["-C", "{repo}", "rev-parse", "--abbrev-ref", "HEAD"],
+      "vars": { "repo": { "type": "path", "under": "setting:repoPath" } } },
+    { "id": "diffstat",
+      "run": "git",
+      "args": ["-C", "{repo}", "diff", "--numstat", "HEAD"],
+      "vars": { "repo": { "type": "path", "under": "setting:repoPath" } } }
+  ],
+  "settings": [
+    { "key": "intervalSec", "type": "number", "label": "Опрос раз в N секунд",
+      "default": 10, "min": 2, "max": 300 }
+  ],
+  "instances": {
+    "label": "Репозиторий",
+    "settings": [
+      { "key": "repoPath", "type": "string", "label": "Папка репозитория", "required": true,
+        "editor": { "type": "folder" } }
+    ]
+  },
+  "preview": [
+    { "card": "branch", "type": "status",
+      "data": {"line1": "main", "line2": "+128 −42 · 6 файл.", "badgeKind": "accent"} },
+    { "card": "files", "type": "meters",
+      "data": {"title": "GIT · СТРОК ИЗМЕНЕНО", "rows": [{"label": "plugin.js", "pct": 100}, {"label": "README.md", "pct": 46}, {"label": "manifest.json", "pct": 12}]} }
+  ]
+}
