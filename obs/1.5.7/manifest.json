@@ -1,0 +1,79 @@
+{
+  "id": "obs",
+  "name": "OBS Studio",
+  "version": "1.5.7",
+  "minAgent": "1.7.0",
+  "sdk": 11,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": [
+      "setting:host"
+    ],
+    "apps": [
+      "obs64.exe",
+      "obs32.exe",
+      "obs"
+    ]
+  },
+  "settings": [
+    {
+      "key": "host",
+      "type": "string",
+      "label": "Адрес OBS (host)",
+      "required": true,
+      "default": "127.0.0.1",
+      "section": "Подключение"
+    },
+    {
+      "key": "port",
+      "type": "number",
+      "label": "Порт obs-websocket",
+      "default": 4455,
+      "min": 1,
+      "max": 65535,
+      "section": "Подключение"
+    },
+    {
+      "key": "password",
+      "type": "secret",
+      "label": "Пароль WebSocket-сервера (если задан)",
+      "section": "Подключение"
+    },
+    {
+      "type": "info",
+      "text": "OBS 30.2+: Tools → WebSocket Server Settings → Enable WebSocket Server"
+    },
+    {
+      "key": "micInput",
+      "type": "string",
+      "label": "Вход микрофона (пусто — выберу сам)",
+      "section": "Карточки",
+      "editor": {
+        "type": "autocomplete",
+        "options": "listInputs"
+      }
+    },
+    {
+      "type": "info",
+      "text": "пусто — спец. вход Mic/Aux или единственный вход захвата"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "stream",
+      "name": "Стрим",
+      "cards": ["obs", "stats", "mic", "fps"],
+      "when": { "card": "obs", "field": "is_on", "op": "on" }
+    }
+  ],
+  "preview": [
+    { "card": "obs", "type": "status",
+      "data": {"line1": "В ЭФИРЕ", "line2": "Основная сцена", "badge": "LIVE", "badgeKind": "rec"} },
+    { "card": "fps", "type": "spark",
+      "data": {"label": "КАДРЫ", "number": 60, "unit": "к/с", "windowSec": 180} },
+    { "card": "stats", "type": "meters",
+      "data": {"rows": [{"label": "CPU", "label16": "ПРОЦЕССОР OBS", "pct": 12}, {"label": "СКИП", "label16": "ПРОПУЩ. КАДРЫ", "pct": 1}, {"label": "СЕТЬ", "label16": "КОНЖЕСТИЯ", "pct": 8}], "footer": "диск 412 ГБ"} },
+    { "card": "mic", "type": "status",
+      "data": {"icon": "mic", "line1": "−18 дБ", "line2": "Blue Yeti", "badge": "Микрофон"} }
+  ]
+}
