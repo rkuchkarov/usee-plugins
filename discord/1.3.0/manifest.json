@@ -1,0 +1,27 @@
+{
+  "id": "discord",
+  "name": "Discord",
+  "version": "1.3.0",
+  "minAgent": "1.7.0",
+  "sdk": 11,
+  "entry": "plugin.js",
+  "permissions": {
+    "pipe": ["discord-ipc-*"],
+    "net": ["discord.com", "cdn.discordapp.com"],
+    "notifications": true,
+    "apps": [
+      "Discord.exe",
+      "DiscordCanary.exe",
+      "DiscordPTB.exe",
+      "discord",
+      "Discord"
+    ]
+  },
+  "settings": [
+    { "key": "notifyJoin", "type": "bool", "label": "Уведомлять о входе в созвон", "default": true }
+  ],
+  "preview": [
+    { "card": "voice", "type": "voice",
+      "data": {"label": "ГОЛОС", "members": [{"mono": "АК", "name": "Алексей", "speaking": true}, {"mono": "МД", "name": "Маша"}, {"mono": "ИЛ", "name": "Илья"}]} }
+  ]
+}

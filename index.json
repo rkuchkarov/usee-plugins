@@ -106,13 +106,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.2.1",
-      "minAgent": "1.3.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/discord/1.2.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/discord/1.2.1/plugin.js",
-      "sha256": "68DBC8F1C04332D785D96F9E87EC1548749B04DA069155BE21EC6F7145ED1492"
+      "version": "1.3.0",
+      "minAgent": "1.7.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/discord/1.3.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/discord/1.3.0/plugin.js",
+      "sha256": "7B8CB37177495F13832881E533A440D9B0305A34686FE9846C317194C24A7B3C"
     },
     "versions": [
+      {
+        "version": "1.2.1",
+        "minAgent": "1.3.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/discord/1.2.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/discord/1.2.1/plugin.js",
+        "sha256": "68DBC8F1C04332D785D96F9E87EC1548749B04DA069155BE21EC6F7145ED1492"
+      },
       {
         "version": "1.2.0",
         "minAgent": "1.4.0",
