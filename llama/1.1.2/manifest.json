@@ -1,0 +1,34 @@
+{
+  "id": "llama",
+  "name": "LLM на llama.cpp",
+  "version": "1.1.2",
+  "minAgent": "1.7.0",
+  "sdk": 11,
+  "entry": "plugin.js",
+  "permissions": { "net": ["setting:addr"] },
+  "settings": [
+    { "key": "addr", "type": "string", "label": "Адрес сервера (host:port)",
+      "required": true, "default": "127.0.0.1:8080", "section": "Подключение" },
+    { "key": "apiKey", "type": "secret", "label": "API-ключ (--api-key, если задан)",
+      "section": "Подключение" },
+    { "key": "intervalSec", "type": "number", "label": "Опрос раз в N секунд",
+      "default": 2, "min": 1, "max": 60 },
+    { "key": "forkMetrics", "type": "select", "label": "Что читать из /metrics",
+      "default": "auto", "section": "Подключение", "options": [
+        { "value": "auto", "label": "сам (Prometheus или JSON-адаптер)" },
+        { "value": "prometheus", "label": "только Prometheus (--metrics)" },
+        { "value": "off", "label": "не читать /metrics" } ] },
+    { "type": "info", "label": "Что должно быть включено",
+      "text": "Достаточно запущенного llama-server: /props и /slots включены по умолчанию. Флаг --metrics не обязателен — с ним добавятся накопительные итоги и точная средняя за запрос; без него скорость считается по дельте /slots." }
+  ],
+  "preview": [
+    { "card": "speed", "type": "spark",
+      "data": {"label": "СКОРОСТЬ", "number": 42, "unit": "т/с", "windowSec": 180} },
+    { "card": "context", "type": "gauge",
+      "data": {"label": "КОНТЕКСТ", "number": 62, "unit": "%", "min": 0, "max": 100} },
+    { "card": "gen", "type": "progress",
+      "data": {"title": "ГЕНЕРАЦИЯ", "pct": 58, "eta": "≈12 с", "speed": "42 т/с", "foot": "512 ток · 12,2 с"} },
+    { "card": "state", "type": "status",
+      "data": {"line1": "LLAMA", "line2": "qwen2.5-coder", "badge": "ГЕНЕРИТ", "badgeKind": "accent"} }
+  ]
+}
