@@ -1,0 +1,83 @@
+{
+  "id": "crypto",
+  "name": "Криптовалюты",
+  "version": "1.0.2",
+  "minAgent": "1.7.0",
+  "sdk": 11,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": ["api.coingecko.com"]
+  },
+  "settings": [
+    {
+      "key": "currency",
+      "type": "select",
+      "label": "Валюта котировок",
+      "default": "usd",
+      "options": [
+        { "value": "usd", "label": "USD ($)" },
+        { "value": "eur", "label": "EUR (€)" },
+        { "value": "rub", "label": "RUB (₽)" }
+      ]
+    },
+    {
+      "key": "intervalMin",
+      "type": "number",
+      "label": "Обновлять раз в N минут",
+      "default": 2,
+      "min": 1,
+      "max": 60
+    }
+  ],
+  "instances": {
+    "label": "Монета",
+    "settings": [
+      {
+        "key": "coin",
+        "type": "string",
+        "label": "Монета (название или тикер)",
+        "required": true,
+        "editor": { "type": "autocomplete", "options": "searchCoin" }
+      }
+    ]
+  },
+  "preview": [
+    {
+      "card": "quote",
+      "type": "message",
+      "data": {
+        "title": "БИТКОИН (BTC)",
+        "titleShort": "BTC",
+        "tone": "problem",
+        "num": "74 359",
+        "unit": "$",
+        "num2": "-2.1",
+        "unit2": "%",
+        "expl": "H: $76.0k · L: $73.7k",
+        "progress": 32
+      }
+    },
+    {
+      "card": "ticker",
+      "type": "status",
+      "data": {
+        "icon": "sparkle",
+        "line1": "BTC · $74,359",
+        "line2": "24ч: −2.1% · H: $76.0k · L: $73.7k",
+        "badge": "-2.1%",
+        "badgeKind": "plain",
+        "detail": "Объём 24ч: $30.5B"
+      }
+    },
+    {
+      "card": "chart",
+      "type": "spark",
+      "data": {
+        "label": "BTC/USD",
+        "number": 74,
+        "unit": "k",
+        "windowSec": 86400
+      }
+    }
+  ]
+}
