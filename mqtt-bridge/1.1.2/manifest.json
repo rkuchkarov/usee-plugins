@@ -1,0 +1,88 @@
+{
+  "id": "mqtt-bridge",
+  "name": "MQTT-мост (Home Assistant)",
+  "version": "1.1.2",
+  "minAgent": "1.5.0",
+  "sdk": 8,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": [
+      "setting:host"
+    ],
+    "data": {
+      "cards": [
+        "*"
+      ],
+      "toasts": true,
+      "entities": [
+        "*"
+      ]
+    }
+  },
+  "settings": [
+    {
+      "key": "host",
+      "type": "string",
+      "label": "Адрес брокера",
+      "required": true,
+      "section": "Подключение"
+    },
+    {
+      "key": "port",
+      "type": "number",
+      "label": "Порт",
+      "default": 1883,
+      "min": 1,
+      "max": 65535,
+      "section": "Подключение"
+    },
+    {
+      "key": "tls",
+      "type": "bool",
+      "label": "TLS",
+      "default": false,
+      "section": "Подключение"
+    },
+    {
+      "key": "username",
+      "type": "string",
+      "label": "Логин",
+      "section": "Подключение"
+    },
+    {
+      "key": "password",
+      "type": "secret",
+      "label": "Пароль",
+      "section": "Подключение"
+    },
+    {
+      "key": "deviceName",
+      "type": "string",
+      "label": "Имя устройства в HA",
+      "default": "Usee",
+      "section": "Home Assistant"
+    },
+    {
+      "key": "minIntervalSec",
+      "type": "number",
+      "label": "Мин. интервал публикации, с",
+      "default": 2,
+      "min": 0,
+      "max": 60,
+      "section": "Home Assistant"
+    },
+    {
+      "key": "sources",
+      "type": "tree",
+      "label": "Источники",
+      "section": "Home Assistant"
+    },
+    {
+      "key": "cleanOnDisable",
+      "type": "bool",
+      "label": "Очистить сущности при выключении",
+      "default": false,
+      "section": "Home Assistant"
+    }
+  ]
+}

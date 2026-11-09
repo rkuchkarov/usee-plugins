@@ -157,13 +157,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.1.1",
-      "minAgent": "1.4.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.1.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.1.1/plugin.js",
-      "sha256": "6094BBCD98B96C195C988A9BB23C5E6F102CB2FA8DF102DC0BF8C0DFD1608178"
+      "version": "1.1.2",
+      "minAgent": "1.5.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.1.2/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.1.2/plugin.js",
+      "sha256": "8FFCE88361F500F6C5F02429DF1D7632FBDA997480399BD4BB02C3F0F2DF3053"
     },
     "versions": [
+      {
+        "version": "1.1.1",
+        "minAgent": "1.4.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.1.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/mqtt-bridge/1.1.1/plugin.js",
+        "sha256": "6094BBCD98B96C195C988A9BB23C5E6F102CB2FA8DF102DC0BF8C0DFD1608178"
+      },
       {
         "version": "1.1.0",
         "minAgent": "1.4.0",
