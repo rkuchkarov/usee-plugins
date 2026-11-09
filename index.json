@@ -812,5 +812,20 @@
       "sha256": "756F865FE7EE50C7362E01368E71901119771504FE568A63525FCC0A33A29EE6"
     },
     "versions": []
+  },
+  {
+    "id": "twitch",
+    "name": "Twitch",
+    "description": "Мониторинг стримов Twitch: статус канала (status), динамика зрителей (spark) и сводка эфира (message) без ключей или через Helix API",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "1.0.0",
+      "minAgent": "1.7.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/twitch/1.0.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/twitch/1.0.0/plugin.js",
+      "sha256": "27DF972C0DD8F4A6E54980E2F7DEA577BAC5EE97E4E16F85D7B4BBE0B9FE9BB2"
+    },
+    "versions": []
   }
 ]
