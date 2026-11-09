@@ -1,0 +1,102 @@
+{
+  "id": "ping",
+  "name": "Пинг сети",
+  "version": "1.0.0",
+  "minAgent": "1.7.0",
+  "sdk": 11,
+  "entry": "plugin.js",
+  "permissions": {},
+  "exec": [
+    {
+      "id": "ping-win",
+      "run": "ping",
+      "args": ["-n", "1", "-w", "{timeout}", "{host}"],
+      "vars": {
+        "host": { "type": "token", "pattern": "^[a-zA-Z0-9.-]+$" },
+        "timeout": { "type": "int", "min": 100, "max": 10000 }
+      }
+    },
+    {
+      "id": "ping-nix",
+      "run": "ping",
+      "args": ["-c", "1", "-W", "1", "{host}"],
+      "vars": {
+        "host": { "type": "token", "pattern": "^[a-zA-Z0-9.-]+$" }
+      }
+    }
+  ],
+  "settings": [
+    {
+      "key": "intervalSec",
+      "type": "number",
+      "label": "Опрос раз в N секунд",
+      "default": 3,
+      "min": 1,
+      "max": 60
+    },
+    {
+      "key": "timeoutMs",
+      "type": "number",
+      "label": "Таймаут пинга (мс)",
+      "default": 1000,
+      "min": 200,
+      "max": 5000
+    }
+  ],
+  "instances": {
+    "label": "Цель",
+    "settings": [
+      {
+        "key": "host",
+        "type": "string",
+        "label": "Хост или IP адрес",
+        "required": true,
+        "editor": { "type": "autocomplete", "options": "suggestHosts" }
+      },
+      {
+        "key": "name",
+        "type": "string",
+        "label": "Название (подпись)"
+      }
+    ]
+  },
+  "preview": [
+    {
+      "card": "chart",
+      "type": "spark",
+      "data": {
+        "label": "1.1.1.1",
+        "number": 14,
+        "unit": "мс",
+        "windowSec": 90
+      }
+    },
+    {
+      "card": "status",
+      "type": "status",
+      "data": {
+        "icon": "bolt",
+        "line1": "1.1.1.1 · 14 мс",
+        "line2": "мин 12 · ср 14 · макс 18 мс · потерь 0%",
+        "badge": "14 мс",
+        "badgeKind": "accent",
+        "detail": "Джиттер: ±2.1 мс"
+      }
+    },
+    {
+      "card": "quote",
+      "type": "message",
+      "data": {
+        "title": "ПИНГ: CLOUDFLARE",
+        "titleShort": "ПИНГ",
+        "tone": "good",
+        "num": "14",
+        "unit": "мс",
+        "num2": "±2",
+        "unit2": "мс",
+        "expl": "мин 12 · макс 18 мс",
+        "progress": 12
+      }
+    }
+  ]
+}
