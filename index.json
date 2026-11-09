@@ -273,13 +273,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.1.1",
+      "version": "1.1.2",
       "minAgent": "1.5.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.1.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.1.1/plugin.js",
-      "sha256": "411BFE85C27D667D7D3F58215E827C53E2965F5D94752C4B429DEA2756344D7A"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.1.2/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.1.2/plugin.js",
+      "sha256": "08920964D8849AADD06465C4FF021A3125E31F6BA7EB2EDCB6742F1F15CD04F8"
     },
     "versions": [
+      {
+        "version": "1.1.1",
+        "minAgent": "1.5.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.1.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/docker/1.1.1/plugin.js",
+        "sha256": "411BFE85C27D667D7D3F58215E827C53E2965F5D94752C4B429DEA2756344D7A"
+      },
       {
         "version": "1.1.0",
         "minAgent": "1.5.0",
