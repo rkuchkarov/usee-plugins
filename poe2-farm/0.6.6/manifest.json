@@ -1,0 +1,75 @@
+{
+  "id": "poe2-farm",
+  "name": "Фарм PoE2",
+  "version": "0.6.6",
+  "minAgent": "1.7.0",
+  "sdk": 11,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": [
+      "www.pathofexile.com",
+      "poe.ninja"
+    ],
+    "files": [
+      "setting:logDir"
+    ],
+    "notifications": true
+  },
+  "settings": [
+    {
+      "key": "logDir",
+      "type": "string",
+      "label": "Папка с логом PoE2",
+      "required": true,
+      "section": "Источник данных",
+      "editor": {
+        "type": "folder",
+        "options": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Path of Exile 2\\logs"
+      }
+    },
+    {
+      "type": "info",
+      "text": "обычно …\\Path of Exile 2\\logs"
+    },
+    {
+      "key": "tradeAccount",
+      "type": "string",
+      "label": "Аккаунт (Ник#1234)",
+      "section": "Учёт лута"
+    },
+    {
+      "type": "info",
+      "text": "ник — со страницы pathofexile2.com/my-account"
+    },
+    {
+      "key": "tabName",
+      "type": "string",
+      "label": "Публичная вкладка",
+      "default": "~price 999 divine usee",
+      "editor": {
+        "type": "autocomplete",
+        "options": "listTabs"
+      }
+    },
+    {
+      "type": "info",
+      "text": "вкладка публичная (правый клик в игре), в имени — цена: ~price 999 divine <метка>"
+    },
+    {
+      "key": "league",
+      "type": "string",
+      "label": "Лига (пусто — определить сама)",
+      "section": "Дополнительно"
+    }
+  ],
+  "preview": [
+    { "card": "zone", "type": "status",
+      "data": {"line1": "Башня ткачей", "line2": "Карта · с 21:40"} },
+    { "card": "stats", "type": "status",
+      "data": {"line1": "сессия 2:14:08 · карт 18", "line2": "в картах 1:32:40 · средняя 5:08"} },
+    { "card": "curve", "type": "spark",
+      "data": {"label": "за сессию", "number": 14, "unit": "div/ч", "windowSec": 54000} },
+    { "card": "loot", "type": "status",
+      "data": {"line1": "+31 div"} }
+  ]
+}

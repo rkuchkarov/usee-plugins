@@ -1,0 +1,82 @@
+{
+  "id": "twitch",
+  "name": "Twitch",
+  "version": "1.0.1",
+  "minAgent": "1.7.0",
+  "sdk": 11,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": ["api.twitch.tv", "id.twitch.tv", "gql.twitch.tv"]
+  },
+  "settings": [
+    {
+      "key": "intervalSec",
+      "type": "number",
+      "label": "Частота обновления (сек)",
+      "default": 30,
+      "min": 10,
+      "max": 300
+    },
+    {
+      "key": "clientId",
+      "type": "string",
+      "label": "Client ID (для Helix API)"
+    },
+    {
+      "key": "clientSecret",
+      "type": "secret",
+      "label": "Client Secret (для Helix API)"
+    }
+  ],
+  "instances": {
+    "label": "Канал / Стример",
+    "settings": [
+      {
+        "key": "channel",
+        "type": "string",
+        "label": "Канал или никнейм стримера",
+        "required": true,
+        "editor": { "type": "autocomplete", "options": "searchChannel" }
+      }
+    ]
+  },
+  "preview": [
+    {
+      "card": "stream",
+      "type": "status",
+      "data": {
+        "icon": "record",
+        "line1": "shroud · 14.5k зрит.",
+        "line2": "Apex Legends · 2ч 15м",
+        "badge": "LIVE",
+        "badgeKind": "accent",
+        "detail": "Ranked grind with the boys"
+      }
+    },
+    {
+      "card": "viewers",
+      "type": "spark",
+      "data": {
+        "label": "SHROUD",
+        "number": 15,
+        "unit": "k",
+        "windowSec": 3600
+      }
+    },
+    {
+      "card": "card",
+      "type": "message",
+      "data": {
+        "title": "SHROUD",
+        "titleShort": "TWITCH",
+        "tone": "good",
+        "num": "14.5",
+        "unit": "k",
+        "num2": "2",
+        "unit2": "ч 15м",
+        "expl": "Apex Legends",
+        "progress": 100
+      }
+    }
+  ]
+}

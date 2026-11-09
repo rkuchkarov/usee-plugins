@@ -1,0 +1,41 @@
+{
+  "id": "weather",
+  "name": "Погода",
+  "version": "1.3.2",
+  "minAgent": "1.7.0",
+  "sdk": 11,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": ["*.open-meteo.com"]
+  },
+  "settings": [
+    { "key": "units", "type": "select", "label": "Единицы", "default": "metric",
+      "options": [
+        { "value": "metric", "label": "°C · м/с" },
+        { "value": "imperial", "label": "°F · mph" }
+      ] },
+    { "key": "pressureUnit", "type": "select", "label": "Давление", "default": "mmhg",
+      "options": [
+        { "value": "mmhg", "label": "мм рт. ст." },
+        { "value": "hpa", "label": "гПа / мбар" },
+        { "value": "inhg", "label": "inHg" }
+      ] },
+    { "key": "intervalMin", "type": "number", "label": "Обновлять раз в N минут",
+      "default": 15, "min": 1, "max": 240 }
+  ],
+  "instances": {
+    "label": "Город",
+    "settings": [
+      { "key": "city", "type": "string", "label": "Город", "required": true,
+        "editor": { "type": "autocomplete", "options": "searchCity" } }
+    ]
+  },
+  "preview": [
+    { "card": "temp", "type": "gauge",
+      "data": {"label": "ПОГОДА", "number": -4, "unit": "°", "min": -30, "max": 45} },
+    { "card": "cond", "type": "status",
+      "data": {"line1": "СНЕГ", "line2": "ощущается −9° · 88% · 755 мм · 3 м/с", "badge": "−4°", "badgeKind": "accent"} },
+    { "card": "forecast", "type": "status",
+      "data": {"line1": "СЕГОДНЯ: СНЕГ", "line2": "ночью −9° · днём −4° · осадки 1.5 мм", "badge": "−4°", "badgeKind": "plain"} }
+  ]
+}
