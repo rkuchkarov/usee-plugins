@@ -767,5 +767,20 @@
         "sha256": "376D238EA85BC9B269D3E989406A14A0A8D274E27F67CB5FA83BF347C367F646"
       }
     ]
+  },
+  {
+    "id": "crypto",
+    "name": "Криптовалюты",
+    "description": "Котировки криптовалют через CoinGecko (без ключа): карточка котировки (message), компактный тикер (status) и график 24ч (spark)",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "1.0.0",
+      "minAgent": "1.7.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/crypto/1.0.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/crypto/1.0.0/plugin.js",
+      "sha256": "E6E466AE9D85D5643F03D372F3A99CE6177DA55E679A678CB281E63405CBF335"
+    },
+    "versions": []
   }
 ]
