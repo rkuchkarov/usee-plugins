@@ -968,13 +968,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.1",
-      "minAgent": "1.7.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/twitch/1.0.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/twitch/1.0.1/plugin.js",
-      "sha256": "CD5F0E6A18A652EA110FE35C63CDB53966571CFAA7BE153A99475FC818F43B2F"
+      "version": "1.0.2",
+      "minAgent": "1.8.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/twitch/1.0.2/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/twitch/1.0.2/plugin.js",
+      "sha256": "EDA768E4F4163FC743ECD698C3C5029710DC2E3F201533A1F8DF47A176E8FFC1"
     },
     "versions": [
+      {
+        "version": "1.0.1",
+        "minAgent": "1.7.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/twitch/1.0.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/twitch/1.0.1/plugin.js",
+        "sha256": "CD5F0E6A18A652EA110FE35C63CDB53966571CFAA7BE153A99475FC818F43B2F"
+      },
       {
         "version": "1.0.0",
         "minAgent": "1.7.0",
