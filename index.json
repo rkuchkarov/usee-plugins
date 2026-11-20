@@ -380,13 +380,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.3.1",
-      "minAgent": "1.7.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.3.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.3.1/plugin.js",
-      "sha256": "571063A145D716C67BE884363B23262CE9D45A192F4A9D2DD313C945D71A8CEF"
+      "version": "1.3.2",
+      "minAgent": "1.8.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.3.2/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.3.2/plugin.js",
+      "sha256": "D89161A0EB8C96656FA2B7A75A62DE2736034A669D34BE722BB313E5C0E39C1E"
     },
     "versions": [
+      {
+        "version": "1.3.1",
+        "minAgent": "1.7.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.3.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/git/1.3.1/plugin.js",
+        "sha256": "571063A145D716C67BE884363B23262CE9D45A192F4A9D2DD313C945D71A8CEF"
+      },
       {
         "version": "1.3.0",
         "minAgent": "1.7.0",
