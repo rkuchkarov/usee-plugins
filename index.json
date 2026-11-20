@@ -6,13 +6,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.7.4",
-      "minAgent": "1.5.1",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.4/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.4/plugin.js",
-      "sha256": "605170D289512A1953C876ADBDB43D86C4DE27BFC1F3D9FA2DC7B9E6264D1DB6"
+      "version": "1.7.5",
+      "minAgent": "1.8.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.5/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.5/plugin.js",
+      "sha256": "983EEFBFDAAAD472E020D5C60D97B6B782A09995A6B5F4E8C1EAE8780AD17BA6"
     },
     "versions": [
+      {
+        "version": "1.7.4",
+        "minAgent": "1.5.1",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.4/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.4/plugin.js",
+        "sha256": "605170D289512A1953C876ADBDB43D86C4DE27BFC1F3D9FA2DC7B9E6264D1DB6"
+      },
       {
         "version": "1.7.3",
         "minAgent": "1.5.1",
