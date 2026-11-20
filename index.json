@@ -866,13 +866,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.3",
-      "minAgent": "1.7.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/crypto/1.0.3/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/crypto/1.0.3/plugin.js",
-      "sha256": "AF17EB5A9424149FCE7BE37B898F7416B70D37A71D4B55C667EDFB2E70A01D25"
+      "version": "1.0.4",
+      "minAgent": "1.8.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/crypto/1.0.4/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/crypto/1.0.4/plugin.js",
+      "sha256": "6CB6B10E2077189ADDE4DE30019578440EF52A40C8A1DE576A2727F203D20AA8"
     },
     "versions": [
+      {
+        "version": "1.0.3",
+        "minAgent": "1.7.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/crypto/1.0.3/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/crypto/1.0.3/plugin.js",
+        "sha256": "AF17EB5A9424149FCE7BE37B898F7416B70D37A71D4B55C667EDFB2E70A01D25"
+      },
       {
         "version": "1.0.2",
         "minAgent": "1.7.0",
