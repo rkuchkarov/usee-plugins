@@ -938,13 +938,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.1",
-      "minAgent": "1.7.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/ping/1.0.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/ping/1.0.1/plugin.js",
-      "sha256": "854F23AEE0C2D8D9B3BAE6C5FD8923139A0AB3D6B06A5ABFC8E895EBBF39C776"
+      "version": "1.0.2",
+      "minAgent": "1.8.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/ping/1.0.2/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/ping/1.0.2/plugin.js",
+      "sha256": "1C2A02CB77F890E7708237EAE4BDFE6B34783A67CB175F302C8D672CD03DC129"
     },
     "versions": [
+      {
+        "version": "1.0.1",
+        "minAgent": "1.7.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/ping/1.0.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/ping/1.0.1/plugin.js",
+        "sha256": "854F23AEE0C2D8D9B3BAE6C5FD8923139A0AB3D6B06A5ABFC8E895EBBF39C776"
+      },
       {
         "version": "1.0.0",
         "minAgent": "1.7.0",
