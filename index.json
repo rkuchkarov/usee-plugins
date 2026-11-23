@@ -1025,5 +1025,20 @@
         "sha256": "27DF972C0DD8F4A6E54980E2F7DEA577BAC5EE97E4E16F85D7B4BBE0B9FE9BB2"
       }
     ]
+  },
+  {
+    "id": "pomodoro",
+    "name": "Помодоро",
+    "description": "Помодоро: фокус, отдых и долгий отдых на карточке «Таймер» (секунды считает прибор), экран-уведомление с кнопками в конце фазы, экран отдыха сценой",
+    "author": "Usee",
+    "repository": "https://github.com/rkuchkarov/usee-plugins",
+    "latest": {
+      "version": "1.0.0",
+      "minAgent": "1.11.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.0.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.0.0/plugin.js",
+      "sha256": "AC6327CDE732234B624C3EA7885AE7DC29337A84F59A3251B556D4AFD32CD123"
+    },
+    "versions": []
   }
 ]
