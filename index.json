@@ -6,13 +6,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.7.5",
-      "minAgent": "1.8.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.5/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.5/plugin.js",
-      "sha256": "983EEFBFDAAAD472E020D5C60D97B6B782A09995A6B5F4E8C1EAE8780AD17BA6"
+      "version": "1.8.0",
+      "minAgent": "1.12.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.8.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.8.0/plugin.js",
+      "sha256": "3598C3B1CC02AFF7A84ED61434F7E90FE61B886091C48392F8298817503009D5"
     },
     "versions": [
+      {
+        "version": "1.7.5",
+        "minAgent": "1.8.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.5/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.7.5/plugin.js",
+        "sha256": "983EEFBFDAAAD472E020D5C60D97B6B782A09995A6B5F4E8C1EAE8780AD17BA6"
+      },
       {
         "version": "1.7.4",
         "minAgent": "1.5.1",
@@ -701,13 +708,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.5.11",
-      "minAgent": "1.10.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.5.11/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.5.11/plugin.js",
-      "sha256": "5071126BDB4C53F2563383EB56153F84388C8396C4EB8E0B11A207D46046210C"
+      "version": "1.6.0",
+      "minAgent": "1.12.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.6.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.6.0/plugin.js",
+      "sha256": "047BB3610C4257E3ED250A7FD2AF43CA3C9FDBDD26A9E887BF858BC3616C9EA3"
     },
     "versions": [
+      {
+        "version": "1.5.11",
+        "minAgent": "1.10.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.5.11/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.5.11/plugin.js",
+        "sha256": "5071126BDB4C53F2563383EB56153F84388C8396C4EB8E0B11A207D46046210C"
+      },
       {
         "version": "1.5.10",
         "minAgent": "1.9.0",
@@ -1033,12 +1047,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.0.0",
-      "minAgent": "1.11.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.0.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.0.0/plugin.js",
-      "sha256": "AC6327CDE732234B624C3EA7885AE7DC29337A84F59A3251B556D4AFD32CD123"
+      "version": "1.1.0",
+      "minAgent": "1.12.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.0/plugin.js",
+      "sha256": "F8B5F2F451C627CAAF5A5C57CE65E9426F80E6BED2F5A896BD29533ED89A14F1"
     },
-    "versions": []
+    "versions": [
+      {
+        "version": "1.0.0",
+        "minAgent": "1.11.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.0.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.0.0/plugin.js",
+        "sha256": "AC6327CDE732234B624C3EA7885AE7DC29337A84F59A3251B556D4AFD32CD123"
+      }
+    ]
   }
 ]
