@@ -1047,13 +1047,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.1.0",
+      "version": "1.1.1",
       "minAgent": "1.12.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.0/plugin.js",
-      "sha256": "F8B5F2F451C627CAAF5A5C57CE65E9426F80E6BED2F5A896BD29533ED89A14F1"
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.1/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.1/plugin.js",
+      "sha256": "96E4A4FDA91B8B8C594C1C723557DC95A4591891E00960D5925204704CED00CA"
     },
     "versions": [
+      {
+        "version": "1.1.0",
+        "minAgent": "1.12.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.0/plugin.js",
+        "sha256": "F8B5F2F451C627CAAF5A5C57CE65E9426F80E6BED2F5A896BD29533ED89A14F1"
+      },
       {
         "version": "1.0.0",
         "minAgent": "1.11.0",
