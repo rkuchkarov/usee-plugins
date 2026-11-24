@@ -1,0 +1,91 @@
+{
+  "id": "obs",
+  "name": "OBS Studio",
+  "version": "1.7.0",
+  "minAgent": "1.13.0",
+  "sdk": 17,
+  "entry": "plugin.js",
+  "permissions": {
+    "net": [
+      "setting:host"
+    ],
+    "apps": [
+      "obs64.exe",
+      "obs32.exe",
+      "obs"
+    ]
+  },
+  "settings": [
+    {
+      "key": "host",
+      "type": "string",
+      "label": "Адрес OBS (host)",
+      "required": true,
+      "default": "127.0.0.1",
+      "section": "Подключение"
+    },
+    {
+      "key": "port",
+      "type": "number",
+      "label": "Порт obs-websocket",
+      "default": 4455,
+      "min": 1,
+      "max": 65535,
+      "section": "Подключение"
+    },
+    {
+      "key": "password",
+      "type": "secret",
+      "label": "Пароль WebSocket-сервера (если задан)",
+      "section": "Подключение"
+    },
+    {
+      "type": "info",
+      "text": "OBS 30.2+: Tools → WebSocket Server Settings → Enable WebSocket Server"
+    },
+    {
+      "key": "micInput",
+      "type": "string",
+      "label": "Вход микрофона (пусто — выберу сам)",
+      "section": "Карточки",
+      "editor": {
+        "type": "autocomplete",
+        "options": "listInputs"
+      }
+    },
+    {
+      "type": "info",
+      "text": "пусто — спец. вход Mic/Aux или единственный вход захвата"
+    }
+  ],
+  "actions": {
+    "record": { "label": "OBS: запись — начать или остановить", "title": "Запись", "icon": "record", "kind": "toggle" },
+    "record_pause": { "label": "OBS: запись — пауза или продолжить", "title": "Пауза записи", "icon": "pause", "kind": "toggle" },
+    "stream": { "label": "OBS: эфир — начать или остановить", "title": "Эфир", "icon": "broadcast", "kind": "toggle",
+                "dangerous": true },
+    "mic": { "label": "OBS: микрофон — выключить или включить", "title": "Микрофон", "icon": "microphone", "kind": "toggle" },
+    "scene": { "label": "OBS: переключить сцену", "title": "Сцена", "icon": "monitor",
+               "params": [
+                 { "key": "scene", "type": "string", "label": "Сцена OBS", "required": true,
+                   "editor": { "type": "autocomplete", "options": "listScenes" } }
+               ] }
+  },
+  "scenes": [
+    {
+      "id": "stream",
+      "name": "Стрим",
+      "cards": ["obs", "stats", "mic", "fps"],
+      "when": { "card": "obs", "field": "is_on", "op": "on" }
+    }
+  ],
+  "preview": [
+    { "card": "obs", "type": "status",
+      "data": {"icon": "broadcast", "line1": "Эфир", "line2": "Основная сцена", "badge": "1:24:07", "on": true, "alarm": true} },
+    { "card": "fps", "type": "spark",
+      "data": {"label": "КАДРЫ", "number": 60, "unit": "к/с", "windowSec": 180} },
+    { "card": "stats", "type": "meters",
+      "data": {"rows": [{"label": "CPU", "label16": "ПРОЦЕССОР OBS", "pct": 12}, {"label": "СКИП", "label16": "ПРОПУЩ. КАДРЫ", "pct": 1}, {"label": "СЕТЬ", "label16": "КОНЖЕСТИЯ", "pct": 8}], "footer": "диск 412 ГБ"} },
+    { "card": "mic", "type": "status",
+      "data": {"icon": "microphone", "line1": "Микрофон", "line2": "Blue Yeti", "badge": "−18 дБ", "on": true} }
+  ]
+}

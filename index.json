@@ -6,13 +6,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.8.0",
-      "minAgent": "1.12.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.8.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.8.0/plugin.js",
-      "sha256": "3598C3B1CC02AFF7A84ED61434F7E90FE61B886091C48392F8298817503009D5"
+      "version": "1.9.0",
+      "minAgent": "1.13.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.9.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.9.0/plugin.js",
+      "sha256": "DCB86E02A1115F9097FF8F29053EB99699EE4B660658BA5CA8C26B8C38952F69"
     },
     "versions": [
+      {
+        "version": "1.8.0",
+        "minAgent": "1.12.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.8.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/home-assistant/1.8.0/plugin.js",
+        "sha256": "3598C3B1CC02AFF7A84ED61434F7E90FE61B886091C48392F8298817503009D5"
+      },
       {
         "version": "1.7.5",
         "minAgent": "1.8.0",
@@ -708,13 +715,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.6.0",
-      "minAgent": "1.12.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.6.0/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.6.0/plugin.js",
-      "sha256": "047BB3610C4257E3ED250A7FD2AF43CA3C9FDBDD26A9E887BF858BC3616C9EA3"
+      "version": "1.7.0",
+      "minAgent": "1.13.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.7.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.7.0/plugin.js",
+      "sha256": "C007AA7C0F9B4CD9EE7A84608B7CB605B63AEAA503CB53A31F3A078C92A91793"
     },
     "versions": [
+      {
+        "version": "1.6.0",
+        "minAgent": "1.12.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.6.0/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/obs/1.6.0/plugin.js",
+        "sha256": "047BB3610C4257E3ED250A7FD2AF43CA3C9FDBDD26A9E887BF858BC3616C9EA3"
+      },
       {
         "version": "1.5.11",
         "minAgent": "1.10.0",
@@ -1047,13 +1061,20 @@
     "author": "Usee",
     "repository": "https://github.com/rkuchkarov/usee-plugins",
     "latest": {
-      "version": "1.1.1",
-      "minAgent": "1.12.0",
-      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.1/manifest.json",
-      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.1/plugin.js",
-      "sha256": "96E4A4FDA91B8B8C594C1C723557DC95A4591891E00960D5925204704CED00CA"
+      "version": "1.2.0",
+      "minAgent": "1.13.0",
+      "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.2.0/manifest.json",
+      "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.2.0/plugin.js",
+      "sha256": "22CFE899D0794AB5D32935C267A9D85B76A5B5B746E4C49F88CFB5C7DCFE2D70"
     },
     "versions": [
+      {
+        "version": "1.1.1",
+        "minAgent": "1.12.0",
+        "manifestUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.1/manifest.json",
+        "bundleUrl": "https://raw.githubusercontent.com/rkuchkarov/usee-plugins/refs/heads/main/pomodoro/1.1.1/plugin.js",
+        "sha256": "96E4A4FDA91B8B8C594C1C723557DC95A4591891E00960D5925204704CED00CA"
+      },
       {
         "version": "1.1.0",
         "minAgent": "1.12.0",

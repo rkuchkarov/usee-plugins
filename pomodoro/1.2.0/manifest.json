@@ -1,0 +1,125 @@
+{
+  "id": "pomodoro",
+  "name": "Помодоро",
+  "version": "1.2.0",
+  "minAgent": "1.13.0",
+  "sdk": 17,
+  "entry": "plugin.js",
+  "permissions": {
+    "notifications": true
+  },
+  "actions": {
+    "toggle": { "label": "Помодоро: старт или пауза", "title": "Помодоро", "icon": "timer", "kind": "toggle" },
+    "reset": { "label": "Помодоро: сброс", "title": "Сброс", "icon": "arrow-clockwise", "dangerous": true },
+    "plus": { "label": "Помодоро: плюс минуты", "title": "Плюс минуты", "icon": "hourglass" },
+    "skip": { "label": "Помодоро: пропустить фазу", "title": "Пропустить", "icon": "skip-forward" },
+    "next": { "label": "Помодоро: следующая фаза", "hidden": true },
+    "more": { "label": "Помодоро: ещё минуты к фазе", "hidden": true },
+    "stop": { "label": "Помодоро: стоп", "hidden": true },
+    "idle": { "label": "Помодоро: уведомление без ответа", "hidden": true }
+  },
+  "settings": [
+    {
+      "key": "focusMin",
+      "type": "number",
+      "label": "Фокус, мин",
+      "default": 25,
+      "min": 1,
+      "max": 180,
+      "section": "Длительности"
+    },
+    {
+      "key": "breakMin",
+      "type": "number",
+      "label": "Отдых, мин",
+      "default": 5,
+      "min": 1,
+      "max": 60,
+      "section": "Длительности"
+    },
+    {
+      "key": "longMin",
+      "type": "number",
+      "label": "Долгий отдых, мин",
+      "default": 15,
+      "min": 1,
+      "max": 120,
+      "section": "Длительности"
+    },
+    {
+      "key": "rounds",
+      "type": "number",
+      "label": "Раундов до долгого отдыха",
+      "default": 4,
+      "min": 1,
+      "max": 8,
+      "section": "Длительности"
+    },
+    {
+      "key": "plusMin",
+      "type": "number",
+      "label": "Сколько минут добавляет «плюс»",
+      "default": 5,
+      "min": 1,
+      "max": 60,
+      "section": "Длительности"
+    },
+    {
+      "key": "notify",
+      "type": "bool",
+      "label": "Уведомление во весь экран в конце фазы",
+      "default": true,
+      "section": "Уведомление"
+    },
+    {
+      "key": "autoBreak",
+      "type": "bool",
+      "label": "Отдых начинается сам",
+      "default": true,
+      "section": "Уведомление"
+    },
+    {
+      "key": "autoFocus",
+      "type": "bool",
+      "label": "Фокус начинается сам",
+      "default": false,
+      "section": "Уведомление"
+    },
+    {
+      "key": "autoSec",
+      "type": "number",
+      "label": "Через сколько секунд — автостарт",
+      "default": 15,
+      "min": 3,
+      "max": 120,
+      "section": "Уведомление"
+    },
+    {
+      "key": "holdSec",
+      "type": "number",
+      "label": "Сколько держится уведомление без ответа, с",
+      "default": 60,
+      "min": 10,
+      "max": 600,
+      "section": "Уведомление"
+    },
+    {
+      "type": "info",
+      "text": "Касание карточки — старт или пауза, удержание — сброс, свайп вправо — плюс минуты, влево — пропустить фазу.\nЖесты меняются в настройках карточки."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "rest",
+      "name": "Отдых",
+      "cards": ["timer"],
+      "when": { "card": "timer", "field": "is_on", "op": "on" }
+    }
+  ],
+  "preview": [
+    { "card": "timer", "type": "timer",
+      "data": {"tone": "red", "word": "Фокус", "mode": "pause", "durSec": 1500, "left": 817, "rounds": 4, "done": 1,
+               "current": true, "at": {"word": "отдых в", "time": "14:30"}, "today": {"count": 3, "text": "1 ч 15"},
+               "week": [0.55, 0.8, 0.4, 0.95, 0.7, 0.25, 0.6]} }
+  ]
+}
